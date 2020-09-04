@@ -1,0 +1,71 @@
+{
+    "key": "group_58489ff591017",
+    "title": "Middle Banner",
+    "fields": [
+        {
+            "key": "field_58489ffdb265e",
+            "label": "Header",
+            "name": "mb_header",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_5848a012b265f",
+            "label": "Image",
+            "name": "mb_image",
+            "type": "image",
+            "instructions": "<span class=\"acf-recommended-size\"> <span>1720px<\/span><span>350px<\/span><\/span>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "full-width",
+            "library": "all",
+            "min_width": 1720,
+            "min_height": 350,
+            "min_size": "",
+            "max_width": 1720,
+            "max_height": 350,
+            "max_size": "",
+            "mime_types": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-templates\/page-home.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1481505879
+}

@@ -1,0 +1,195 @@
+.home {
+    .cta {
+        margin-top: 200px;
+        margin-bottom: 75px;
+        height: 280px;
+        color: #fff;
+
+        @media (max-width: $screen-lg) {
+            height: 560px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: $screen-md) {
+            height: auto;
+        }
+
+        .container {
+            height: 100%;
+        }
+
+        .row {
+            margin-left: 0;
+            margin-right: 0;
+            height: 100%;
+        }
+
+        div[class^=col-] {
+            padding-left: 0;
+            padding-right: 0;
+            height: 100%;
+
+            @media (max-width: $screen-lg) {
+                height: 50%;
+            }
+
+            @media (max-width: $screen-md) {
+                height: auto;
+            }
+        }
+
+        .wrapper {
+            padding: 0 50px;
+            position: absolute;
+            top: 50%;
+            @include translate(0, -50%);
+
+            @media (max-width: $screen-md) {
+                position: static;
+                @include translate(0, 0);
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+
+            @media (max-width: $screen-xs) {
+                padding: 20px;
+            }
+        }
+
+        &__faq, &__contact, &__image {
+            height: 100%;
+            width: 100%;
+        }
+
+        &__faq {
+            width: 100%;
+            background-color: #3B3438;
+
+            .cta__header {
+                margin-bottom: 50px;
+            }
+        }
+
+        &__contact, &__image {
+            background-color: #6ECD9C;
+        }
+
+        &__header {
+            font-size: 22px;
+            font-weight: 100;
+        }
+
+        &__email {
+            font-size: 18px;
+            font-weight: 100;
+
+            a {
+                color: #fff;
+            }
+
+            @media (max-width: $screen-xl) {
+                font-size: 16px;
+            }
+        }
+
+        &__contact {
+            .wrapper {
+                @media (max-width: $screen-xl) {
+                    padding: 0 15px;
+                }
+
+                @media (max-width: $screen-lg) {
+                    padding: 0 50px;
+                }
+
+                @media (max-width: $screen-md) {
+                    padding: 20px 50px;
+                }
+
+                @media (max-width: $screen-xs) {
+                    padding: 20px;
+                }
+            }
+        }
+
+        &__image {
+            @media (max-width: $screen-lg) {
+                overflow: hidden;
+                position: relative;
+            }
+
+            &__img {
+                background: url('../img/request-a-quote-img.jpg') no-repeat center;
+                background-size: cover;
+                width: 100%;
+                height: 300px;
+                position: absolute;
+                bottom: 80px;
+
+                @media (max-width: $screen-md) {
+                    position: static;
+                }
+            }
+
+            &__overlay {
+                height: 200px;
+                background-color: darken(rgba(7, 99, 50, 0.6), 5%);
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+
+                @media (max-width: $screen-md) {
+                    height: 100%;
+                }
+
+                @media (max-width: $screen-sm) {
+                    padding: 60px 50px 0 50px;
+                }
+
+                @media (max-width: $screen-xs) {
+                    padding: 20px 20px 0 20px;
+                }
+            }
+
+            &__header, .btn {
+                position: absolute;
+                top: 50%;
+                @include translate(0, -50%);
+
+                @media (max-width: $screen-sm) {
+                    position: static;
+                    @include translate(0, 0);
+                }
+            }
+
+            &__header {
+                font-size: 38px;
+                font-weight: 300;
+                line-height: 1.1em;
+                left: 60px;
+
+                @media (max-width: $screen-sm) {
+
+                    font-size: 22px;
+
+                    br {
+                        display: none;
+                    }
+                }
+            }
+
+            .btn {
+                right: 60px;
+            }
+        }
+
+        &__text {
+            position: absolute;
+            bottom: 17px;
+            width: 100%;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 100;
+        }
+    }
+}

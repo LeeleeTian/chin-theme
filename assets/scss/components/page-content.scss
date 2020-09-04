@@ -1,0 +1,315 @@
+.pc {
+    overflow: hidden;
+
+    & > .container > .row {
+        margin-left: 0;
+        @media (max-width: $screen-sm-max) {
+            margin-right: 0;
+        }
+    }
+
+    &__grey {
+        background-color: #FAFAFA;
+        margin-bottom: -99999px;
+        padding-bottom: 99999px;
+
+        @media (max-width: $screen-sm-max) {
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        &.grey1 {
+            width: 14%;
+
+            @media (max-width: $screen-lg-max) {
+                display: none;
+            }
+        }
+
+        &.grey2 {
+            @media (min-width: $screen-lg) {
+                width: 20%;
+            }
+        }
+    }
+
+    &__nav {
+        @media (min-width: $screen-md) {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+    }
+
+    &__sidebar {
+        padding-top: 55px;
+        margin-right: 40px;
+
+        @media (max-width: $screen-lg-max) {
+            margin-right: auto;
+        }
+
+        @media (max-width: $screen-sm-max) {
+            margin-bottom: 0;
+            padding-bottom: 20px;
+        }
+
+        &__header {
+            font-size: 22px;
+            font-family: "Gotham Med", sans-serif;
+            line-height: 1.1em;
+            margin-bottom: 50px;
+            position: relative;
+
+            a {
+                color: #333;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+
+            &::after {
+                content: '';
+                display: block;
+                background-color: #000;
+                width: 47px;
+                height: 2px;
+                position: absolute;
+                bottom: -10px;
+            }
+        }
+
+        &__link {
+            display: block;
+            height: 100px;
+            background-position: center;
+            background-size: cover;
+            padding: 0;
+            margin-bottom: 20px;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 300;
+            @include transition(opacity 0.2s linear);
+            position: relative;
+
+            &:hover, &:focus, &:active {
+                color: #fff;
+                text-decoration: none;
+            }
+
+            &:hover {
+                opacity: 0.8;
+            }
+
+            span {
+                position: absolute;
+                top: 50%;
+                @include translate(0, -50%);
+                padding: 25px;
+            }
+        }
+
+        &__work {
+            order: 98;
+            border: 6px solid $red;
+            padding: 30px 22px;
+            margin-bottom: 50px;
+
+            &__header {
+                font-family: "Gotham Med", sans-serif;
+                color: $red;
+                font-size: 18px;
+            }
+
+            .btn {
+                margin-top: 20px;
+                display: block;
+                padding-left: 0;
+                padding-right: 0;
+                text-align: center;
+            }
+        }
+
+        &__section {
+            order: 99;
+            &__wrapper {
+                padding-left: 30px;
+                margin-bottom: 40px;
+
+                &.phone {
+                    background: url('../img/icon-phone.png') no-repeat 0 0;
+                }
+
+                &.email {
+                    background: url('../img/icon-mail.png') no-repeat 0 -2px;
+
+                    @media (max-width: $screen-xl) {
+                        .pc__sidebar__section__content {
+                            font-size: 12px;
+                        }
+                    }
+
+                    @media (max-width: $screen-lg2) {
+                        .pc__sidebar__section__content {
+                            margin-left: -30px;
+                            font-size: 12px;
+                        }
+                    }
+
+                    @media (max-width: $screen-md) {
+                        .pc__sidebar__section__content {
+                            margin-left: 0;
+                            font-size: 14px;
+                        }
+                    }
+
+                    @media (max-width: $screen-xs) {
+                        .pc__sidebar__section__content {
+                            //margin-left: -30px;
+                        }
+                    }
+                }
+
+                &.fax {
+                    background: url('../img/icon-fax.png') no-repeat 0 0;
+                }
+
+                &.address {
+                    background: url('../img/icon-map.png') no-repeat 0 0;
+
+                    &:last-child {
+                        background: url('../img/icon-mail.png') no-repeat 0 -2px;
+                    }
+                }
+            }
+
+            &__header {
+                font-family: "Gotham Med", sans-serif;
+            }
+
+            a {
+                color: #3b3438;
+            }
+
+            .social__icons {
+                li {
+                    margin-right: 18px;
+
+                    @media (max-width: $screen-lg2) {
+                        margin-right: 15px;
+                    }
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+
+                i {
+                    font-size: 20px;
+
+                    &.fa-google-plus {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__content {
+        padding: 55px 0 40px 30px;
+
+        @media (max-width: $screen-lg-max) {
+            padding-left: 0;
+        }
+
+        .pc__content-heading {
+            @extend .heading-red;
+        }
+
+        h1,
+        .pc__content-heading {
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 25px;
+        }
+
+        h3, h4, h5, h6, ul, ol, table, img, hr, form {
+            margin-bottom: 25px;
+        }
+
+        p {
+            margin-bottom: 25px;
+            font-size: 16px;
+            font-weight: 300;
+        }
+
+        li, li p {
+            font-weight: 300;
+            font-size: 16px;
+        }
+
+        table td {
+            vertical-align: top;
+
+            ul {
+                padding-left: 12px;
+                margin-right: 15px;
+            }
+
+            @media (max-width: $screen-xs) {
+                display: block;
+                width: 100%;
+            }
+        }
+
+        table td, table td p {
+            font-size: 16px;
+            font-weight: 300;
+        }
+    }
+}
+
+body {
+    &.page-template-page-our-services-individual,
+    &.page-template-page-our-services-category,
+    &.page-template-page-about,
+    &.page-template-single-faq,
+    &.single-true_faq,
+    &.tax-true_faq_tax,
+    &.page-template-page-contact,
+    &.true_case_study-template-default,
+    &.page-template-page-industries,
+    &.page-template-page-resources,
+    &.page-template-page-chinese-identity,
+    &.page-template-page-our-work {
+        .top-banner {
+            margin-bottom: 0;
+        }
+    }
+
+    &.page-template-single-faq,
+    &.single-true_faq,
+    &.tax-true_faq_tax {
+        .pc__sidebar {
+            margin-right: 0;
+        }
+    }
+}
+
+.true-wysiwyg-field {
+    img {
+        margin: 25px 25px 25px 0;
+    }
+}
+
+.sticky-menu {
+    main.main {
+        margin-top: 78px;
+    }
+}

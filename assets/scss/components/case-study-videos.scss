@@ -1,0 +1,211 @@
+.case-study-video {
+    padding-top: 250px;
+    margin-bottom: 50px;
+    overflow: hidden;
+    @media (min-width: $screen-xl-min) {
+        padding-top: 270px;
+    }
+    &__wrapper {
+        position: relative;
+    }
+    &__videos {
+        @media (min-width: $screen-xs) {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        @media (min-width: $screen-sm) {
+            justify-content: flex-end;
+            position: absolute;
+            top: -250px;
+            right: 0;
+            width: 60%;
+            height: 225px;
+        }
+        @media (min-width: $screen-xl-min) {
+            top: -270px;
+        }
+        .case-study {
+            &__top {
+                position: relative;
+                padding-bottom: 70%;
+                background-position: left center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin-bottom: 10px;
+                @media (min-width: $screen-xl-min) {
+                    padding-bottom: 52%;
+                }
+                .overlay {
+                    position: absolute;
+                    background-color: #000000;
+                    opacity: .4;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                }
+                .play-link-wrapper {
+                    position: absolute;
+                    z-index: 1;
+                    transform: scale(.8);
+                    top: calc(50% - 30px);
+                    right: calc(50% - 45px);
+                }
+            }
+            &__bottom {
+                .business-name {
+                    color: $red;
+                    margin: 0;
+                    text-align: center;
+                }
+                .client-name {
+                    color: $gray;
+                    text-align: center;
+                }
+            }
+            @media (min-width: $screen-xs) {
+                &__1,
+                &__2 {
+                    position: relative;
+                    width: 45%;
+                    height: 100%;
+                }
+            }
+            @media (min-width: $screen-sm) {
+                &__1,
+                &__2 {
+                    width: 40%;
+                }
+                &__2 { margin-left: 30px; }
+                &__bottom {
+                    .business-name {
+                        text-align: left;
+                    }
+                    .client-name {
+                        text-align: left;
+                    }
+                }
+            }
+            @media (min-width: $screen-lg) {
+                &__1,
+                &__2 {
+                    width: 35%;
+                }
+            }
+            @media (min-width: 1440px) {
+                &__1,
+                &__2 {
+                    width: 30%;
+                }
+            }
+            @media (min-width: $screen-xl-min) {
+                &__1,
+                &__2 {
+                    width: 40%;
+                }
+            }
+        }
+    }
+    &__image {
+        .wrapper {
+            position: relative;
+            height: 100%;
+            .image {
+                width: 100%;
+                height: auto;
+            }
+            .overlay {
+                position: absolute;
+                height: 25px;
+                width: 100%;
+                bottom: 0;
+                background-color: $red;
+                opacity: .7;
+            }
+        }
+        @media (min-width: $screen-xs) {
+            max-width: 500px;
+            max-height: 500px;
+            overflow: hidden;
+            margin: auto;
+        }
+        @media (min-width: $screen-sm) {
+            position: absolute;
+            top: -250px;
+            left: 0;
+            width: 40%;
+            height: 275px;
+        }
+        @media (min-width: $screen-md) {
+            height: 350px;
+            width: 35%;
+            .wrapper {
+                .overlay {
+                    height: 100px;
+                }
+            }
+        }
+        @media (min-width: 1440px) {
+            height: 375px;
+            width: 30%;
+            .wrapper {
+                .overlay {
+                    height: 125px;
+                }
+            }
+        }
+    }
+    &__content {
+        background-color: $red;
+        .wrapper {
+            position: relative;
+            margin-left: auto;
+            margin-right: 0;
+            padding: 20px;
+            font-family: $font-family-default;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            @media (min-width: $screen-sm) {
+                text-align: right;
+                padding: 50px;
+                flex-direction: row;
+            }
+            @media (min-width: $screen-lg-min) {
+                width: calc(100% - 400px);
+            }
+            @media (min-width: $screen-xl-min) {
+                width: calc(100% - 400px);
+            }
+            .heading {
+                display: inline-block;
+                margin-bottom: 0;
+                color: #ffffff;
+                font-weight: 300;
+                @media (min-width: $screen-sm) {
+                    text-align: left;
+                }
+            }
+
+            .btn {
+                display: inline-block;
+                border: 1px solid $red;
+                background-color: #ffffff;
+                vertical-align: text-bottom;
+                @media (min-width: $screen-sm) {
+                    margin-left: 20px;
+                }
+                @media (min-width: $screen-sm) {
+                    margin-left: 40px;
+                }
+                &:hover {
+                    border-color: #fff;
+                    background-color: $red;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

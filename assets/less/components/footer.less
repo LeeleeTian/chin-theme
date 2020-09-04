@@ -1,0 +1,48 @@
+/**
+ * ================== True Footer ==================
+ * 
+ * Web design by True.
+ * 
+ */
+.true-footer-block
+{
+	margin: 0;
+	float: right;
+	display: inline-block;
+	overflow:hidden; position:relative; height:20px; min-width:150px;
+	a {
+	    display:block; text-decoration:none !important; padding-left:10px; text-align:right; line-height:20px;
+	}
+	@media (max-width: @screen-xs-max) {
+	    margin-top: 10px;
+	    a {
+	        text-align: center;
+	    }
+	}
+	.hover-text {
+	    text-transform:lowercase; top:100%; font-weight:bold;
+	    position:absolute; left:0px;right:0px; margin:auto;
+	    background-color: transparent; z-index:4;
+	    line-height:16px;
+		.transition(all 350ms ease-in-out);
+	}
+
+	.normal-text {
+	    position:absolute; left:0px;right:0px; margin:auto;
+	    top:0%;
+	    line-height:16px;
+	    .transition(all 350ms ease-in-out);
+	}
+	img {
+	    vertical-align:middle; margin-top:-3px; display:inline-block;
+	}
+	&:hover .hover-text {
+	    top:0px;
+	}
+	&:hover .normal-text {
+	    top:-100%;
+	}
+	@media(max-width: @screen-xs-max) {
+	    float: none;
+	}
+}

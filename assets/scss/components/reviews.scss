@@ -1,0 +1,76 @@
+.reviews {
+    margin-bottom: 80px;
+
+    &__slides {
+        padding-top: 50px;
+    }
+
+    &__title {
+        font-size: 23px;
+        color: rgba(0, 0, 0, 0.7);
+        font-family: "Gotham Med", sans-serif;
+    }
+
+    &__content {
+        font-size: 16px;
+        font-weight: 300;
+        margin-bottom: 40px;
+    }
+
+    &__author {
+        color: #6ECD9C;
+        font-weight: 700;
+    }
+
+    .btn {
+        border-color: $red;
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        top: -60px;
+        right: 15px;
+
+        @media (max-width: $screen-xs) {
+            width: 30px;
+            height: 30px;
+            top: 0;
+            left: calc(50% - 1px);
+        }
+
+        &.btn--left {
+            right: 78px;
+
+            @media (max-width: $screen-xs) {
+                left: calc(50% - 47px);
+            }
+
+            &::after {
+                left: calc(50% + 3px);
+            }
+        }
+
+        &::after {
+            border-bottom-color: $red;
+            border-right-color: $red;
+            width: 20%;
+            height: 20%;
+            border-bottom-width: 3px;
+            border-right-width: 3px;
+
+            @media (max-width: $screen-xs) {
+                width: 40%;
+                height: 40%;
+            }
+        }
+
+        &:hover {
+            border-color: $red;
+            background-color: $red;
+
+            &::after {
+                border-bottom-color: #fff;
+                border-right-color: #fff;
+            }
+        }
+    }
+}

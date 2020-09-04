@@ -1,0 +1,25 @@
+.parallax-left, .parallax-right {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+
+    @media (max-width: $screen-md) {
+        display: none;
+    }
+}
+
+.parallax-left {
+    left: 0;
+    top: 200px;
+    width: 333px;
+    height: 627px;
+    background: url('../img/parallax/parallax-line-1.png') no-repeat center;
+}
+
+.parallax-right {
+    right: 0;
+    top: 1400px;
+    width: 237px;
+    height: 771px;
+    background: url('../img/parallax/parallax-line-3.png') no-repeat center;
+}

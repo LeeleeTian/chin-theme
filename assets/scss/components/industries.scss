@@ -1,0 +1,182 @@
+.industries {
+    &__categories {
+        list-style-type: none;
+        margin: 0 0 50px 0;
+        padding: 0;
+
+        li {
+            border-bottom: 1px solid #E5E5E5;
+            padding: 30px 35px 30px 0;
+            position: relative;
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            .btn {
+                position: absolute;
+                right: 0;
+                top: 50%;
+                @include translate(0, -50%);
+                border-color: #EAEAEA;
+
+                &:after {
+                    border-right-color: #EAEAEA;
+                    border-bottom-color: #EAEAEA;
+                }
+            }
+
+            a {
+                color: #3B3438;
+                text-decoration: none;
+                display: block;
+                cursor: pointer;
+
+                &.active, &:hover, &.active {
+                    color: $red;
+
+                    .btn {
+                        border-color: $red;
+
+                        &:after {
+                            border-right-color: $red;
+                            border-bottom-color: $red;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__category {
+        margin-bottom: 90px;
+
+        &:nth-child(4n + 1) {
+            h1 {
+                color: #020202;
+            }
+        }
+
+        &:nth-child(4n + 2) {
+            h1 {
+                color: #9d7ad2;
+            }
+        }
+
+        &:nth-child(4n + 3) {
+            h1 {
+                color: #fc4f56;
+            }
+        }
+
+        &:nth-child(4n) {
+            h1 {
+                color: #6ecd9c;
+            }
+        }
+
+        &__description {
+            margin-bottom: 50px;
+        }
+
+        &__more {
+            display: block;
+            height: 100px;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+
+            &__overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                display: block;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.4);
+                color: #fff;
+                font-family: 'Gotham Med', sans-serif;
+                padding-top: 40px;
+                padding-left: 30px;
+                @include transition(all 0.2s linear);
+
+                &:hover {
+                    color: #fff;
+                    text-decoration: none;
+                    background: rgba(0, 0, 0, 0.6);
+
+                    .btn {
+                        background-color: #fff;
+
+                        &::after {
+                            border-right-color: #333;
+                            border-bottom-color: #333;
+                        }
+                    }
+                }
+            }
+
+            .btn {
+                position: absolute;
+                right: 30px;
+                top: 50%;
+                @include translate(0, -50%);
+            }
+        }
+    }
+
+    &__menu {
+        &.affix {
+            top: 130px;
+            width: 271px;
+
+            @media (max-width: $screen-sm-max) {
+                position: static !important;
+            }
+
+            @media (max-width: $screen-xl) {
+                width: 215px;
+            }
+
+            @media (max-width: $screen-lg2) {
+                width: 201px;
+            }
+
+            @media (max-width: $screen-lg) {
+                width: 209px;
+            }
+
+            @media (max-width: $screen-sm-max) {
+                width: 100%;
+            }
+
+        }
+
+        &.affix-bottom {
+            position: absolute !important;
+            width: 271px;
+
+            @media (max-width: $screen-sm-max) {
+                position: static !important;
+            }
+
+            @media (max-width: $screen-xl) {
+                width: 215px;
+            }
+
+            @media (max-width: $screen-lg2) {
+                width: 201px;
+            }
+
+            @media (max-width: $screen-lg) {
+                width: 209px;
+            }
+
+            @media (max-width: $screen-sm-max) {
+                width: 100%;
+            }
+        }
+    }
+}

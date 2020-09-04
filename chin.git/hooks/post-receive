@@ -1,0 +1,36 @@
+#!/bin/sh
+# =========================================================
+# Replace {env} with production or staging
+# Replace {path} with combination of account name, and path to the git folder.
+#     this path will be appended to /home/
+#     on WP for example: mysite/public_html/wp-content/themes/true-theme
+#     on WP trueserver for example: trueserver/public_html/mysite.trueserver.com.au/wp-content/themes/true-theme
+#     on custom project for example: customacc/public_html/
+# Replace {git}  with the name of git folder, INCLUDING .git extension
+# =========================================================
+# Feel free to remove comments when you're done replacing
+# You might need to update your path references if you require PHP7, for example:
+# /opt/cpanel/ea-php71/root/usr/bin/php /opt/cpanel/composer/bin/composer install --prefer-dist
+while read oldrev newrev ref
+do
+    if [[ $ref =~ .*/staging$ ]];
+    then
+        echo "Deploying staging..."
+        git --work-tree=/home/trueserv/public_html/chin.trueserver.com.au/wp-content/themes/chin-theme/ --git-dir=/home/trueserv/public_html/chin.trueserver.com.au/wp-content/themes/chin-theme/chin.git checkout staging -f
+        cd ..
+            # Check if a composer.json file is present
+            if [ -f composer.json ]; then
+                echo ">> Running 'composer install --prefer-dist'"
+                /opt/cpanel/ea-php71/root/usr/bin/php /opt/cpanel/composer/bin/composer install --prefer-dist
+                echo ">> Running 'npm install'"
+                npm install
+                echo ">> Running 'gulp --production'"
+                node_modules/.bin/gulp --production
+                echo "Done!"
+            else
+                echo "No composer found"
+            fi
+    else
+        echo "Ref $ref successfully received.  Doing nothing: only the staging branch may be deployed on this server."
+    fi
+done

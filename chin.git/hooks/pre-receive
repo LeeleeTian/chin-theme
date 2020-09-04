@@ -1,0 +1,15 @@
+#!/bin/sh
+# =========================================================
+# Replace {env} with production or staging
+# =========================================================
+# Feel free to remove comments when you're done replacing
+while read oldrev newrev ref
+do
+    if [[ $ref =~ .*/staging$ ]];
+    then
+        echo "Received staging, moving to post-receive..."
+    else
+        echo "Not staging branch. Doing nothing"
+        exit 1
+    fi
+done

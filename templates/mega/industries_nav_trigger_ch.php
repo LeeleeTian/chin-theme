@@ -1,0 +1,1 @@
+<?= View::make('mega/industries_nav_trigger') ?>

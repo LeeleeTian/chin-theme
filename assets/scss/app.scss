@@ -1,0 +1,50 @@
+/*!
+ * Built on the second floor of 115-117 Chapel Street
+ *
+ * @author TrueAgency
+ */
+
+/**
+ * ================== Imports ==================
+ */
+@import "fonts";
+@import "variables";
+@import "../vendor/font-awesome/scss/font-awesome";
+@import "../vendor/bootstrap/scss/_bootstrap";
+
+@import "grid-lg2";
+@import "grid-xl";
+
+@import "core";
+@import "mixins";
+
+/**
+ * ================== Bootstrap Overrides ==================
+ *
+ * Perferred to override bootstrap default behaviours in
+ * our own files.
+ * Example: to override bootstrap navbar, create a file:
+ *    - /assets/vendor/bootstrap/less/navbar => /bootstrap/navbar
+ *
+ */
+
+@import "type";
+
+/**
+ * ================== Components ==================
+ *
+ * Partials, modularised and/or reusable LESS files.
+ * e.g. components/footer, components/header
+ *
+ */
+@import "components/all";
+
+/**
+ * ================== Pages ==================
+ *
+ * Page specific LESS files. Where it doesnt
+ * fit as components, pages is the place to go.
+ *
+ */
+@import "pages/404";
+@import "pages/general";

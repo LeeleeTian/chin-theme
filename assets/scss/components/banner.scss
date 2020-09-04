@@ -1,0 +1,56 @@
+.home-banner {
+    height: 350px;
+    background-color: #9D7AD2;
+    margin-bottom: 78px;
+    margin-top: 180px;
+
+    .container, .row, div[class^=col-] {
+        height: 100%;
+    }
+
+    .row, div[class^=col-] {
+        width: 100%;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: -100px;
+        filter: contrast(1.2);
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__overlay {
+        background-color: darken(rgba(157, 122, 210, 0.65), 40%);
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: calc(100% - 100px);
+    }
+
+    &__header {
+        color: #fff;
+        font-size: 40px;
+        font-weight: 100;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        @include translate(0, -50%);
+        width: 100%;
+        padding: 0 30px;
+
+        @media (max-width: $screen-md) {
+            font-size: 30px;
+        }
+
+        @media (max-width: $screen-sm) {
+            font-size: 24px;
+        }
+
+        @media (max-width: $screen-xs) {
+            font-size: 20px;
+        }
+    }
+}

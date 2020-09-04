@@ -1,0 +1,7 @@
+0000000000000000000000000000000000000000 39e60e328c38a20acbce7f0a0dd9902b6bf754e2 TrueServer <server@server.com> 1554699487 +1000	checkout: moving from master to staging
+39e60e328c38a20acbce7f0a0dd9902b6bf754e2 26ee2f1e54725420fd84cbd9012b4c3d57235547 TrueServer <server@server.com> 1554782884 +1000	push
+26ee2f1e54725420fd84cbd9012b4c3d57235547 26ee2f1e54725420fd84cbd9012b4c3d57235547 TrueServer <server@server.com> 1554782884 +1000	checkout: moving from staging to staging
+26ee2f1e54725420fd84cbd9012b4c3d57235547 8e0ae7b62abb53577f7d01d2713b6a213ea05e90 TrueServer <server@server.com> 1554785187 +1000	push
+8e0ae7b62abb53577f7d01d2713b6a213ea05e90 8e0ae7b62abb53577f7d01d2713b6a213ea05e90 TrueServer <server@server.com> 1554785189 +1000	checkout: moving from staging to staging
+8e0ae7b62abb53577f7d01d2713b6a213ea05e90 d63990e81d153af0ae9ab1fe0e39aed5afdfe3d6 TrueServer <server@server.com> 1556768773 +1000	push
+d63990e81d153af0ae9ab1fe0e39aed5afdfe3d6 d63990e81d153af0ae9ab1fe0e39aed5afdfe3d6 TrueServer <server@server.com> 1556768773 +1000	checkout: moving from staging to staging

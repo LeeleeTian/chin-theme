@@ -1,0 +1,13 @@
+{
+    "require": {
+        "vlucas/phpdotenv": "^2.4",
+        "symfony/var-dumper": "^3.1",
+        "illuminate/support": "^5.2",
+        "abraham/twitteroauth": "^0.7.1",
+        "zendframework/zend-feed": "^2.7",
+        "zendframework/zend-http": "^2.5",
+        "symfony/http-foundation": "^3.1",
+        "monolog/monolog": "^1.22",
+        "mailchimp/mailchimp": "^2.0"
+    }
+}

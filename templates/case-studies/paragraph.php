@@ -1,0 +1,1 @@
+<div class="cs__paragraph"><?= $paragraph ?></div>

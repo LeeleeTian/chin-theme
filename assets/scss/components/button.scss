@@ -1,0 +1,95 @@
+.btn {
+    @include borderRadius(0);
+    border-width: 3px;
+    border-style: solid;
+    padding: 17px 40px;
+    @include transition(all 0.2s linear);
+
+    &--small {
+        padding: 7px;
+    }
+
+    &--red {
+        border-color: $red;
+        color: $red;
+
+        &:hover {
+            background-color: $red;
+            color: #fff;
+        }
+
+        &--full {
+            background-color: $red;
+            color: #fff;
+
+            &:hover {
+                background-color: #fff;
+                color: $red;
+                border-color: $red;
+            }
+        }
+    }
+
+    &--white {
+        border-color: #fff;
+        background-color: #fff;
+        color: $gray-base;
+
+        &:hover {
+            border-color: #777;
+            background-color: #777;
+            color: #fff;
+        }
+    }
+
+    &--grey {
+        border-color: #EAEAEA;
+        color: #333;
+
+        &:hover {
+            border-color: #3B3438;
+            background-color: #3B3438;
+            color: #fff;
+        }
+    }
+
+    &--square {
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        border-color: #fff;
+        position: relative;
+        padding: 0;
+
+        &:hover {
+            background-color: #fff;
+
+            &::after {
+                border-color: #333;
+            }
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 25%;
+            height: 25%;
+            border-right: 2px solid #fff;
+            border-bottom: 2px solid #fff;
+            left: 50%;
+            top: 50%;
+            @include transform(translate(-60%, -50%) rotate(-45deg));
+            @include transition(all 0.2s linear);
+        }
+        &.btn--left {
+            &::after {
+                @include transform(translate(-60%, -50%) rotate(-225deg));
+            }
+        }
+
+    }
+
+    &--transparent {
+        background: none;
+    }
+}

@@ -1,0 +1,241 @@
+.team {
+    h1 {
+        margin-bottom: 80px;
+    }
+
+    &__division {
+        margin-bottom: 70px;
+        border-bottom: 1px solid #EAEAEA;
+
+        &:last-child {
+            border: none;
+        }
+
+        .team__member {
+            position: relative;
+            height: 285px;
+            color: #fff;
+            margin-bottom: 80px;
+            cursor: pointer;
+
+            .wrapper {
+                height: 130px;
+                margin-top: -37px;
+                padding-top: 42px;
+            }
+
+            img {
+                display: block;
+                margin: 0 auto;
+                position: relative;
+                z-index: -1;
+            }
+
+            &__name {
+                font-size: 14px;
+                font-family: 'Gotham Med', sans-serif;
+                position: relative;
+
+                &::after {
+                    content: '';
+                    display: block;
+                    border-top: 1px solid rgba(255, 255, 255, 0.5);
+                    width: 30px;
+                    position: absolute;
+                    left: calc(50% - 15px);
+                    bottom: -5px;
+                }
+            }
+
+            &__occupation {
+                font-size: 12px;
+            }
+        }
+
+        .purple {
+            .team__member {
+                width: 15%;
+                margin-left: auto;
+                margin-right: auto;
+
+                @media (max-width: $screen-md) {
+                    width: auto;
+                }
+
+                .wrapper {
+                    background-color: rgba(157, 122, 210, 0.8);
+                }
+            }
+        }
+
+        .red {
+            .team__member {
+                .wrapper {
+                    background-color: rgba(252, 79, 86, 0.8);
+                }
+            }
+        }
+
+        .black {
+            .team__member {
+                .wrapper {
+                    background-color: rgba(59, 52, 56, 0.8);
+                }
+            }
+        }
+
+        .green {
+            .team__member {
+                .wrapper {
+                    background-color: rgba(110, 205, 156, 0.8);
+                }
+            }
+        }
+    }
+
+    &__modal {
+        .modal-dialog {
+            width: 100%;
+            margin: 200px auto 0 auto;
+
+            .modal-content {
+                @include borderRadius(0);
+                @include box-shadow(none);
+                background-image: url('../img/parallax/parallax-line-2a.png');
+                background-position: left top;
+                background-repeat: no-repeat;
+
+                .modal-body {
+                    padding-top: 75px;
+                    padding-bottom: 75px;
+                }
+            }
+        }
+
+        &__close {
+            position: absolute;
+            z-index: 1;
+            border: none;
+            background: transparent;
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            top: -45px;
+            right: 0;
+
+            span {
+                font-size: 40px;
+                position: relative;
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+
+                &::before, &::after {
+                    content: '';
+                    width: 40px;
+                    border-top: 1px solid #fff;
+                    position: absolute;
+                    left: 0;
+                    top: 20px;
+                }
+
+                &::before {
+                    @include rotate(45deg);
+                }
+
+                &::after {
+                    @include rotate(-45deg);
+                }
+            }
+        }
+
+        &__member {
+            color: #fff;
+
+            .wrapper {
+                margin-top: -37px;
+                padding-top: 55px;
+                padding-bottom: 20px;
+                position: relative;
+                z-index: 2;
+            }
+
+            img {
+                margin: 0 auto;
+                position: relative;
+                z-index: 1;
+            }
+        }
+
+        &__name {
+            font-family: 'Gotham Med', sans-serif;
+            position: relative;
+
+            &::after {
+                content: '';
+                display: block;
+                border-top: 1px solid rgba(255, 255, 255, 0.5);
+                width: 30px;
+                position: absolute;
+                left: calc(50% - 15px);
+                bottom: -5px;
+            }
+        }
+
+        &__occupation, &__phone {
+            font-size: 12px;
+        }
+
+        &__phone {
+             i {
+                 font-size: 18px;
+                 position: relative;
+                 top: 4px;
+                 left: -4px;
+                 @include rotate(16deg);
+             }
+        }
+
+        &__header {
+            font-size: 24px;
+        }
+
+        &__content {
+            font-size: 16px;
+            font-weight: 300;
+        }
+
+        .team__modal__member {
+            width: 80%;
+            margin: 0 auto 20px auto;
+
+            @media (max-width: $screen-md) {
+                width: 100%;
+            }
+
+            &.purple {
+                .wrapper {
+                    background-color: rgba(157, 122, 210, 0.8);
+                }
+            }
+
+            &.red {
+                .wrapper {
+                    background-color: rgba(252, 79, 86, 0.8);
+                }
+            }
+
+            &.black {
+                .wrapper {
+                    background-color: rgba(59, 52, 56, 0.8);
+                }
+            }
+
+            &.green {
+                .wrapper {
+                    background-color: rgba(110, 205, 156, 0.8);
+                }
+            }
+        }
+    }
+}
