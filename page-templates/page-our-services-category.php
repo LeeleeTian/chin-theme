@@ -18,11 +18,16 @@ $workLink = get_field('work_link', 'options');
 $phone = get_field('contact_phone_number', 'options');
 $internationalPhone = get_field('contact_international_phone_number', 'options');
 $email = get_field('contact_email_address', 'options');
+
 ?>
 <?= View::make('page/top_banner', [
     'header' => get_field('top_banner_text'),
     'image'  => get_field('top_banner_image'),
     'video' => get_field('top_banner_video'),
+    'is_show' => get_field('top_youtube_show'),
+    'youtube' => get_field('top_youtube'),
+    'bg_color' => get_field('banner_background_color'),
+    'bg_text' => get_field('banner_bg_text'),
     'backgroundVideo' => get_field('top_banner_background_video')
 ]) ?>
 <div class="services__individual pc">

@@ -17,7 +17,19 @@ $backgroundImage = $image['url'];
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="top-banner__image" style="background-image: url('<?= $backgroundVideo ? '' : $backgroundImage ?>');">
+                <?php if (isset($is_show)&& $is_show): ?>
+                    <div class="d-flex">
+                        <div class="flex-item video-text service" style="background-color: <?= $bg_color ?>">
+                            <?= $bg_text ?>
+                        </div>
+                        <div class="flex-item">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?= $youtube ?>?rel=0&modestbranding=1" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                <?php else: ?>
+                    <div class="top-banner__image" style="background-image: url('<?= $backgroundVideo ? '' : $backgroundImage ?>');">
                     <?php if (isset($breadcrumbs)): ?>
                         <?= $breadcrumbs ?>
                     <?php else: ?>
@@ -58,6 +70,7 @@ $backgroundImage = $image['url'];
                     </div>
                     <?php endif; ?>
                 </div>
+                <?php endif; ?>
             </div>
         </div>
     </div>

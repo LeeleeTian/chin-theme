@@ -48,12 +48,15 @@
             "disabled": 0
         },
         {
-            "default_value": "",
-            "placeholder": "",
-            "key": "field_5e436246b012d",
-            "label": "Video",
-            "name": "top_banner_video",
-            "type": "url",
+            "default_value": 0,
+            "message": "",
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "key": "field_5f678ae4d3d9f",
+            "label": "Top Video",
+            "name": "top_youtube_show",
+            "type": "true_false",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -64,15 +67,49 @@
             }
         },
         {
-            "return_format": "array",
-            "library": "all",
-            "min_size": "",
-            "max_size": "",
-            "mime_types": "",
-            "key": "field_5e43754fda7aa",
-            "label": "Background Video",
-            "name": "top_banner_background_video",
-            "type": "file",
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "key": "field_5f678b0cd3da0",
+            "label": "Youtube Video",
+            "name": "top_youtube",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "key": "field_5f678ed63fb36",
+            "label": "Banner Background Color",
+            "name": "banner_background_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "default_value": "",
+            "delay": 0,
+            "key": "field_5f678f5b34060",
+            "label": "Banner Text",
+            "name": "banner_bg_text",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -119,5 +156,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1581479560
+    "modified": 1600622851
 }
