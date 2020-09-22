@@ -24,7 +24,7 @@ $backgroundImage = $image['url'];
                         </div>
                         <div class="flex-item">
                             <div class="embed-responsive embed-responsive-16by9">
-                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?= $youtube ?>?rel=0&modestbranding=1" allowfullscreen></iframe>
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?= $youtube ?>?rel=0&modestbranding=1&loop=1" allowfullscreen></iframe>
                             </div>
                         </div>
                     </div>
