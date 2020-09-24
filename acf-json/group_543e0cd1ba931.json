@@ -669,41 +669,6 @@
             }
         },
         {
-            "default_value": "",
-            "placeholder": "",
-            "key": "field_5e433d8273865",
-            "label": "Video",
-            "name": "language_services_video",
-            "type": "url",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            }
-        },
-        {
-            "return_format": "array",
-            "library": "all",
-            "min_size": "",
-            "max_size": "",
-            "mime_types": "",
-            "key": "field_5e9e3c3508e75",
-            "label": "Video Background",
-            "name": "language_services_video_bg",
-            "type": "file",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            }
-        },
-        {
             "allow_null": 0,
             "key": "field_5859ce34ed368",
             "label": "Language Menu Trigger",
@@ -795,46 +760,16 @@
             }
         },
         {
-            "default_value": "",
-            "placeholder": "",
-            "key": "field_5e433d5473864",
-            "label": "Video",
-            "name": "marketing_services_video",
-            "type": "url",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            }
-        },
-        {
-            "return_format": "array",
-            "library": "all",
-            "min_size": "",
-            "max_size": "",
-            "mime_types": "",
-            "key": "field_5e9e3c1108e74",
-            "label": "Video Background",
-            "name": "marketing_services_video_bg",
-            "type": "file",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            }
-        },
-        {
+            "post_type": [],
+            "taxonomy": [],
             "allow_null": 0,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1,
             "key": "field_5d1d64acadc82",
             "label": "Marketing Menu Trigger",
             "name": "marketing_service_nav_trigger",
-            "type": "nav_picker",
+            "type": "post_object",
             "instructions": "",
             "required": 1,
             "conditional_logic": 0,
@@ -842,15 +777,19 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            },
-            "nav_source": 3
+            }
         },
         {
+            "post_type": [],
+            "taxonomy": [],
             "allow_null": 0,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1,
             "key": "field_5d1d64a9adc81",
             "label": "Marketing Menu Trigger",
             "name": "marketing_service_nav_trigger_ch",
-            "type": "nav_picker",
+            "type": "post_object",
             "instructions": "",
             "required": 1,
             "conditional_logic": 0,
@@ -858,8 +797,7 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            },
-            "nav_source": 30
+            }
         },
         {
             "default_value": "",
@@ -991,5 +929,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1587428655
+    "modified": 1600919108
 }

@@ -8,13 +8,32 @@ $video = get_field('video_url');
 <div class="container" style="margin-bottom: 40px;">
     <div class="d-flex">
         <div class="flex-item video-text" style="background-color: rgb(246,80,88)">
-                <p>/ Chinese Translation and Interpreting</p>
-                <p>/ Brand and IP protection</p>
-                <p>/ Marketing and Social Media</p>
+            <h3>Experts in:</h3>
+            <p>Chinese Translation and Interpreting</p>
+            <p>Brand and IP Protection</p>
+            <p>Marketing and Social Media</p>
         </div>
         <div class="flex-item">
             <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/k1EK-_LGKsI?rel=0&modestbranding=1&loop=1" allowfullscreen></iframe>
+                <?php if($auto) : ?>
+                <video class="video" preload loop poster="<?= $poster ? $poster['url'] : '' ?>">
+                    <source src="<?= $auto['url'] ?>" type="<?= $auto['mime_type'] ?>" />
+                </video>
+                <button class="play-link">
+                    <i class="fa fa-play icon"></i>
+                </button>
+                <script type="text/javascript">
+                    var video = document.querySelector('video.video');
+                    var playBtn = document.querySelector('button.play-link');
+                    playBtn.addEventListener('click',function () {
+                        video.play();
+                        video.setAttribute('controls',true);
+                        this.style.display = 'none';
+                    })
+                </script>
+                <?php elseif ($video) : ?>
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/k1EK-_LGKsI?rel=0&modestbranding=1&loop=1" allowfullscreen></iframe>
+                <?php endif; ?>
             </div>
         </div>
     </div>
