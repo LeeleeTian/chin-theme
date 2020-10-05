@@ -18,7 +18,8 @@ $workLink = get_field('work_link', 'options');
 $phone = get_field('contact_phone_number', 'options');
 $internationalPhone = get_field('contact_international_phone_number', 'options');
 $email = get_field('contact_email_address', 'options');
-
+$post_title = get_field('display_title');
+$res_title = $post_title == '' ? get_the_title():$post_title;
 ?>
 <?= View::make('page/top_banner', [
     'header' => get_field('top_banner_text'),
@@ -29,7 +30,7 @@ $email = get_field('contact_email_address', 'options');
     'bg_color' => get_field('banner_background_color'),
     'bg_text' => get_field('banner_bg_text'),
     'backgroundVideo' => get_field('top_banner_background_video'),
-    'display' => get_field('display_title'),
+    'display' => $post_title,
     'auto' => get_field('uploaded_video')
 ]) ?>
 <div class="services__individual pc">
@@ -48,7 +49,7 @@ $email = get_field('contact_email_address', 'options');
             </div>
             <div class="col-md-9 col-lg-9 col-lg2-6">
                 <div class="pc__content">
-                    <h2 class="pc__content-heading"><?= get_the_title() ?></h2>
+                    <h2 class="pc__content-heading"><?= $res_title ?></h2>
                     <?= get_field('page_body') ?>
                     <?= View::make('services/reviews', ['reviews' => get_field('reviews')]) ?>
                 </div>
