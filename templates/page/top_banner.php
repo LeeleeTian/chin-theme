@@ -9,7 +9,11 @@ array_walk($ancestors, function (&$item) {
 $ancestors = array_reverse($ancestors);
 
 if (!isset($title)) {
-    $title = $post->post_title;
+    if( isset($display) && $display!==''){
+        $title = $display;
+    }else{
+        $title = $post->post_title;
+    }
 }
 $backgroundImage = $image['url'];
 ?>
@@ -24,7 +28,25 @@ $backgroundImage = $image['url'];
                         </div>
                         <div class="flex-item">
                             <div class="embed-responsive embed-responsive-16by9">
-                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?= $youtube ?>?rel=0&modestbranding=1&loop=1&playlist=<?= $youtube ?>" allowfullscreen></iframe>
+                                <?php if($auto) : ?>
+                                    <video class="video" preload loop>
+                                        <source src="<?= $auto['url'] ?>" type="<?= $auto['mime_type'] ?>" />
+                                    </video>
+                                    <button class="play-link">
+                                        <i class="fa fa-play icon"></i>
+                                    </button>
+                                    <script type="text/javascript">
+                                        var video = document.querySelector('video.video');
+                                        var playBtn = document.querySelector('button.play-link');
+                                        playBtn.addEventListener('click',function () {
+                                            video.play();
+                                            video.setAttribute('controls',true);
+                                            this.style.display = 'none';
+                                        })
+                                    </script>
+                                <?php elseif ($youtube) : ?>
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?= $youtube ?>?rel=0&modestbranding=1&loop=1&playlist=<?= $youtube ?>" allowfullscreen></iframe>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </div>
