@@ -29,7 +29,7 @@ $email = get_field('contact_email_address', 'options');
     'bg_color' => get_field('banner_background_color'),
     'bg_text' => get_field('banner_bg_text'),
     'backgroundVideo' => get_field('top_banner_background_video'),
-    'display_title' => get_field('display_title'),
+    'display' => get_field('display_title'),
     'auto' => get_field('uploaded_video')
 ]) ?>
 <div class="services__individual pc">
