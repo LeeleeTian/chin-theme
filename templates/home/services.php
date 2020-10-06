@@ -26,7 +26,7 @@ $right_l = get_field('right_link','options');
         </div>
         <div class="row home__services__tiles">
             <div class="col-sm-6 home__services__tiles--left">
-                <?php if ($langVid && false ) : ?>
+                <?php if ($langVid ) : ?>
                 <div class="play-link-wrapper">
                     <a href="<?= $langVid ?>" class="play-link red" data-video-popup>
                         <i class="fa fa-play icon"></i>
@@ -37,7 +37,7 @@ $right_l = get_field('right_link','options');
                 <div class="tile-bg-wrapper tile-bg-wrapper--left">
                     <?php if ($left_v) : ?>
                     <div class="tile-bg-video-wrap">
-                        <video class="tile-bg-video video" width="100%" loop controls poster="<?= $langBg ? $langBg['sizes']['large'] : '' ?>">
+                        <video class="tile-bg-video video" width="100%" autoplay loop muted controls poster="<?= $langBg ? $langBg['sizes']['large'] : '' ?>">
                             <source src="<?= $left_v['url'] ?>" type="<?= $left_v['mime_type'] ?>" />
                         </video>
                     </div>
@@ -53,7 +53,7 @@ $right_l = get_field('right_link','options');
                 </div>
             </div>
             <div class="col-sm-6  home__services__tiles--right">
-                <?php if ($mrkVid && false ) : ?>
+                <?php if ($mrkVid ) : ?>
                 <div class="play-link-wrapper">
                     <a href="<?= $mrkVid ?>" class="play-link red" data-video-popup>
                         <i class="fa fa-play icon"></i>
@@ -64,7 +64,7 @@ $right_l = get_field('right_link','options');
                 <div class="tile-bg-wrapper tile-bg-wrapper--right">
                     <?php if ($right_v) : ?>
                     <div class="tile-bg-video-wrap">
-                        <video class="tile-bg-video video" width="100%" controls loop poster="<?= $mrkBg ? $mrkBg['sizes']['large'] : '' ?>">
+                        <video class="tile-bg-video video" width="100%" autoplay loop muted poster="<?= $mrkBg ? $mrkBg['sizes']['large'] : '' ?>">
                             <source src="<?= $right_v['url'] ?>" type="<?= $right_v['mime_type'] ?>" />
                         </video>
                     </div>
