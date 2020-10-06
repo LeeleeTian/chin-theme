@@ -37,7 +37,7 @@ $right_l = get_field('right_link','options');
                 <div class="tile-bg-wrapper tile-bg-wrapper--left">
                     <?php if ($left_v) : ?>
                     <div class="tile-bg-video-wrap">
-                        <video class="tile-bg-video video" width="100%" loop  poster="<?= $langBg ? $langBg['sizes']['large'] : '' ?>">
+                        <video class="tile-bg-video video" width="100%" loop controls poster="<?= $langBg ? $langBg['sizes']['large'] : '' ?>">
                             <source src="<?= $left_v['url'] ?>" type="<?= $left_v['mime_type'] ?>" />
                         </video>
                     </div>
@@ -64,7 +64,7 @@ $right_l = get_field('right_link','options');
                 <div class="tile-bg-wrapper tile-bg-wrapper--right">
                     <?php if ($right_v) : ?>
                     <div class="tile-bg-video-wrap">
-                        <video class="tile-bg-video video" width="100%" autoplay loop muted poster="<?= $mrkBg ? $mrkBg['sizes']['large'] : '' ?>">
+                        <video class="tile-bg-video video" width="100%" controls loop poster="<?= $mrkBg ? $mrkBg['sizes']['large'] : '' ?>">
                             <source src="<?= $right_v['url'] ?>" type="<?= $right_v['mime_type'] ?>" />
                         </video>
                     </div>
