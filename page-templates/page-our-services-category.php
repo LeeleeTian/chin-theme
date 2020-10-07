@@ -19,6 +19,7 @@ $phone = get_field('contact_phone_number', 'options');
 $internationalPhone = get_field('contact_international_phone_number', 'options');
 $email = get_field('contact_email_address', 'options');
 $post_title = get_field('display_title');
+$banner_title = get_field('banner_title');
 $res_title = $post_title == '' ? get_the_title():$post_title;
 ?>
 <?= View::make('page/top_banner', [
@@ -30,7 +31,7 @@ $res_title = $post_title == '' ? get_the_title():$post_title;
     'bg_color' => get_field('banner_background_color'),
     'bg_text' => get_field('banner_bg_text'),
     'backgroundVideo' => get_field('top_banner_background_video'),
-    'display' => $post_title,
+    'display' => $banner_title,
     'auto' => get_field('uploaded_video')
 ]) ?>
 <div class="services__individual pc">
