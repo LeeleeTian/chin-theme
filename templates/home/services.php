@@ -37,9 +37,12 @@ $right_l = get_field('right_link','options');
                 <div class="tile-bg-wrapper tile-bg-wrapper--left">
                     <?php if ($left_v) : ?>
                     <div class="tile-bg-video-wrap">
-                        <video class="tile-bg-video video" width="100%" autoplay loop muted controls poster="<?= $langBg ? $langBg['sizes']['large'] : '' ?>">
+                        <video class="tile-bg-video video" width="100%" loop poster="<?= $langBg ? $langBg['sizes']['large'] : '' ?>">
                             <source src="<?= $left_v['url'] ?>" type="<?= $left_v['mime_type'] ?>" />
                         </video>
+                        <button class="play-link">
+                            <i class="fa fa-play icon"></i>
+                        </button>
                     </div>
                     <?php else: ?>
                     <div class="image" style="background-image: url('<?= $langBg ? $langBg['sizes']['large'] : '' ?>')"></div>
@@ -64,9 +67,12 @@ $right_l = get_field('right_link','options');
                 <div class="tile-bg-wrapper tile-bg-wrapper--right">
                     <?php if ($right_v) : ?>
                     <div class="tile-bg-video-wrap">
-                        <video class="tile-bg-video video" width="100%" autoplay loop muted poster="<?= $mrkBg ? $mrkBg['sizes']['large'] : '' ?>">
+                        <video class="tile-bg-video video" width="100%" loop poster="<?= $mrkBg ? $mrkBg['sizes']['large'] : '' ?>">
                             <source src="<?= $right_v['url'] ?>" type="<?= $right_v['mime_type'] ?>" />
                         </video>
+                        <button class="play-link">
+                            <i class="fa fa-play icon"></i>
+                        </button>
                     </div>
                     <?php else: ?>
                     <div class="image" style="background-image: url('<?= $mrkBg ? $mrkBg['sizes']['large'] : '' ?>')"></div>
