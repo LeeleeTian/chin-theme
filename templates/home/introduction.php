@@ -12,6 +12,10 @@ $video = get_field('video_url');
             <p>Chinese Translation and Interpreting</p>
             <p>Brand and IP Protection</p>
             <p>Marketing and Social Media</p>
+            <a class="flex-button" href="https://www.chincommunications.com.au/growing-your-china-business-through-covid-19/">
+                Our COVID-19 commitment
+                Tel: 1300 792446
+            </a>
         </div>
         <div class="flex-item">
             <div class="embed-responsive embed-responsive-16by9">
