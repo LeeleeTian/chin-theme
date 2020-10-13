@@ -13,7 +13,7 @@ $video = get_field('video_url');
             <p>Brand and IP Protection</p>
             <p>Marketing and Social Media</p>
             <a class="flex-button" href="https://www.chincommunications.com.au/growing-your-china-business-through-covid-19/">
-                Our COVID-19 commitment
+                Our COVID-19 commitment<br/>
                 Tel: 1300 792446
             </a>
         </div>
