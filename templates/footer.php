@@ -62,11 +62,11 @@ $addresses = array_slice(get_field('addresses', 'options'), 0, 2);
                 </div>
                 <div class="col-sm-6 text-center-xs">
                     <div class="true-footer-block">
-                        <a href="https://trueagency.com.au/?utm_source=Chin%20Communications&utm_campaign=Chin%20Comminications&utm_medium=website" title="Web Design Melbourne" target="_blank">
+                        <a href="https://kongfuseo.com.au/" title="Web Design Melbourne" target="_blank">
                             <div class="normal-text">
-                                <img src="<?= TrueLib::getImageURL('common/true-logo-footer.png?b=3') ?>" alt="True Agency" class="retina-image" />
+                                <img src="<?= TrueLib::getImageURL('common/seo-company.png?b=3') ?>" alt="Kongfuseo" class="retina-image" />
                             </div>
-                            <div class="hover-text">trueagency.com.au</div>
+                            <div class="hover-text">kongfuseo.com.au</div>
                         </a>
                     </div>
                 </div>
