@@ -64,7 +64,7 @@ $addresses = array_slice(get_field('addresses', 'options'), 0, 2);
                     <div class="true-footer-block">
                         <a href="https://kongfuseo.com.au/" title="Web Design Melbourne" target="_blank">
                             <div class="normal-text">
-                                <img src="<?= TrueLib::getImageURL('common/seo-company.png?b=3') ?>" alt="Kongfuseo" class="retina-image" />
+                                <img src="<?= TrueLib::getImageURL('common/seo-company.png?b=3') ?>" alt="Kongfuseo" class="retina-image" width="20" height="20" />
                             </div>
                             <div class="hover-text">kongfuseo.com.au</div>
                         </a>
