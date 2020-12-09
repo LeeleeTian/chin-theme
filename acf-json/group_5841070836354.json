@@ -294,6 +294,25 @@
                 "class": "",
                 "id": ""
             }
+        },
+        {
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "key": "field_5f7dcca107832",
+            "label": "Banner Titile",
+            "name": "banner_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
         }
     ],
     "location": [
@@ -315,5 +334,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1560996303
+    "modified": 1602079937
 }

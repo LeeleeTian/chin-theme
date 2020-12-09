@@ -720,6 +720,79 @@
             }
         },
         {
+            "return_format": "array",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "",
+            "key": "field_5f7c1eca1e4b0",
+            "label": "Left Video",
+            "name": "left_video",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "key": "field_5f7c1f061e4b1",
+            "label": "Left Title",
+            "name": "left_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "post_type": [],
+            "taxonomy": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "allow_archives": 1,
+            "key": "field_5f7c1fee1e4b4",
+            "label": "Left Link",
+            "name": "left_link",
+            "type": "page_link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "placeholder": "",
+            "key": "field_5f7c5900f10f4",
+            "label": "Left Link Video",
+            "name": "language_services_video",
+            "type": "url",
+            "instructions": "URL",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
             "placement": "top",
             "endpoint": 0,
             "key": "field_5d1d650fadc83",
@@ -760,16 +833,11 @@
             }
         },
         {
-            "post_type": [],
-            "taxonomy": [],
             "allow_null": 0,
-            "multiple": 0,
-            "return_format": "object",
-            "ui": 1,
             "key": "field_5d1d64acadc82",
             "label": "Marketing Menu Trigger",
             "name": "marketing_service_nav_trigger",
-            "type": "post_object",
+            "type": "nav_picker",
             "instructions": "",
             "required": 1,
             "conditional_logic": 0,
@@ -777,19 +845,15 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "nav_source": 3
         },
         {
-            "post_type": [],
-            "taxonomy": [],
             "allow_null": 0,
-            "multiple": 0,
-            "return_format": "object",
-            "ui": 1,
             "key": "field_5d1d64a9adc81",
             "label": "Marketing Menu Trigger",
             "name": "marketing_service_nav_trigger_ch",
-            "type": "post_object",
+            "type": "nav_picker",
             "instructions": "",
             "required": 1,
             "conditional_logic": 0,
@@ -797,7 +861,8 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "nav_source": 30
         },
         {
             "default_value": "",
@@ -811,6 +876,79 @@
             "type": "text",
             "instructions": "",
             "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "return_format": "array",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "",
+            "key": "field_5f7c1f0a1e4b2",
+            "label": "Right Video",
+            "name": "right_video",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "key": "field_5f7c1fcb1e4b3",
+            "label": "Right Title",
+            "name": "right_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "post_type": [],
+            "taxonomy": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "allow_archives": 1,
+            "key": "field_5f7c20161e4b5",
+            "label": "Right Link",
+            "name": "right_link",
+            "type": "page_link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "placeholder": "",
+            "key": "field_5f7c5923f10f5",
+            "label": "Right Link Video",
+            "name": "marketing_services_video",
+            "type": "url",
+            "instructions": "URL",
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -929,5 +1067,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1600919108
+    "modified": 1601984852
 }
