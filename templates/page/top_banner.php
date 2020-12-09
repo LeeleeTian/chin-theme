@@ -16,7 +16,7 @@ if (!isset($title)) {
     }
 }
 $backgroundImage = $image['url'];
-$poster = get_field('video_url');
+$poster = get_field('video_poster');
 ?>
 <div class="top-banner">
     <div class="container">
