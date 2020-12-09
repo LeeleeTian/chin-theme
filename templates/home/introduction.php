@@ -20,7 +20,7 @@ $video = get_field('video_url');
         <div class="flex-item">
             <div class="embed-responsive embed-responsive-16by9">
                 <?php if($auto) : ?>
-                <video class="video" preload loop>
+                <video class="video" preload loop poster="<?= $poster ? $poster['url'] : '' ?>">
                     <source src="<?= $auto['url'] ?>" type="<?= $auto['mime_type'] ?>" />
                 </video>
                 <button class="play-link">
