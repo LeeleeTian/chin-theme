@@ -9,7 +9,7 @@ $video = get_field('video_url');
     <div class="d-flex">
         <div class="flex-item video-text" style="background-color: rgb(246,80,88)">
             <h3>Experts in:</h3>
-            <p>Chinese Translation and Interpreting</p>
+            <h1>Chinese Translation and Interpreting</h1>
             <p>Brand and IP Protection</p>
             <p>Marketing and Social Media</p>
             <a class="flex-button" href="https://www.chincommunications.com.au/growing-your-china-business-through-covid-19/">
