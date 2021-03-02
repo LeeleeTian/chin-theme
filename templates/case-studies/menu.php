@@ -66,7 +66,7 @@ $services = get_categories([
 <!--    --><?//= Lingo::get('label.filter_by_service') ?>
 <!--</p>-->
 <?php //foreach ($services as $service): ?>
-<!--<a href="--><?//=get_the_permalink(40) . 'service/' . $service->term_id ?><!--"-->
+<!--<a href="--><?//=get_the_permalink(40) . 'service/' . $service-><!--term_id--> ?><!--"-->
 <!--    data-term-id="--><?//=$service->term_id ?><!--"-->
 <!--    class="btn btn--grey btn--small our-work__service --><?//= in_array($service->term_id, $selectedServices) ? 'active' : '' ?><!--">-->
 <!--    --><?//= $service->name ?>
