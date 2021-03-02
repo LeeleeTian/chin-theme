@@ -67,8 +67,8 @@ $services = get_categories([
 <!--</p>-->
 <?php //foreach ($services as $service): ?>
 <!--<a href="--><?//=get_the_permalink(40) . 'service/' . $service-><!--//term_id ?>--><!--"-->
-<!--    data-term-id="--><?//=$service->term_id ?><!--"-->
-<!--    class="btn btn--grey btn--small our-work__service --><?//= in_array($service->term_id, $selectedServices) ? 'active' : '' ?><!--">-->
-<!--    --><?//= $service->name ?>
+<!--    data-term-id="--><?//=$service-><!--term_id ?>--><!--"-->
+<!--    class="btn btn--grey btn--small our-work__service --><?//= in_array($service-><!--term_id, $selectedServices) ? 'active' : '' ?>--><!--">-->
+<!--    --><?//= $service-><!--name ?>-->
 <!--</a>-->
 <?php //endforeach;
