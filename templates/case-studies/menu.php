@@ -62,7 +62,8 @@ $services = get_categories([
 </a>
 <?php endforeach; ?>
 
-<!--<p class="pc__sidebar__header last">--><?//= Lingo::get('label.filter_by_service') ?>
+<!--<p class="pc__sidebar__header last">-->
+<!--    --><?//= Lingo::get('label.filter_by_service') ?>
 <!--</p>-->
 <?php //foreach ($services as $service): ?>
 <!--<a href="--><?//=get_the_permalink(40) . 'service/' . $service->term_id ?><!--"-->
