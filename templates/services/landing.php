@@ -39,7 +39,7 @@ $services = get_children([
 //                                    $separtor = '&';
 //                                }
 //                                ?>
-<!--                                <a href="--><?//= get_permalink(getenv('PAGE_OUR_WORK')) ?><!----><?//= $separtor ?><!--services=--><?//= $service->ID ?><!--">-->
+<!--                                <a href="--><?//= get_permalink(getenv('PAGE_OUR_WORK')) ?><!----><?//= $separtor ?><!--services=--><?//= $service-><!--ID ?>--><!--">-->
 <!--                                    --><?php
 //                                    if (ICL_LANGUAGE_CODE != 'en') {
 //                                        $pageId = icl_object_id($service->ID, 'page', true, 'en');
