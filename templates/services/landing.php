@@ -32,29 +32,29 @@ $services = get_children([
                                     </a>
                                 </p>
                             </div>
-<!--                            <div class="col-md-3 services__service__case-studies">-->
-<!--                                --><?php
-//                                $separtor = '?';
-//                                if (ICL_LANGUAGE_CODE != 'en') {
-//                                    $separtor = '&';
-//                                }
-//                                ?>
-<!--                                <a href="--><?//= get_permalink(getenv('PAGE_OUR_WORK')) ?><!----><?//= $separtor ?><!--services=--><?//= $service-><!--ID ?>--><!--">-->
-<!--                                    --><?php
-//                                    if (ICL_LANGUAGE_CODE != 'en') {
-//                                        $pageId = icl_object_id($service->ID, 'page', true, 'en');
-//                                    } else {
-//                                        $pageId = $service->ID;
-//                                    }
-//
-//                                    $label = Lingo::get('label.case_study_' . $pageId);
-//                                    if ($label === null) {
-//                                        $label = 'See our ' . $service->post_title . ' Case Studies';
-//                                    }
-//                                    echo $label;
-//                                    ?>
-<!--                                </a>-->
-<!--                            </div>-->
+                            <div class="col-md-3 services__service__case-studies">
+                                <?php
+                                $separtor = '?';
+                                if (ICL_LANGUAGE_CODE != 'en') {
+                                    $separtor = '&';
+                                }
+                                ?>
+                                <a href="<?= get_permalink(getenv('PAGE_OUR_WORK')) ?><?= $separtor ?>services=<?= $service->ID ?>">
+                                    <?php
+                                    if (ICL_LANGUAGE_CODE != 'en') {
+                                        $pageId = icl_object_id($service->ID, 'page', true, 'en');
+                                    } else {
+                                        $pageId = $service->ID;
+                                    }
+
+                                    $label = Lingo::get('label.case_study_' . $pageId);
+                                    if ($label === null) {
+                                        $label = 'See our ' . $service->post_title . ' Case Studies';
+                                    }
+                                    echo $label;
+                                    ?>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 <?php endforeach; ?>
