@@ -7,7 +7,7 @@
                         <div class="col-md-12 text-center">
                             <h2 class="heading-red"><?= $division['division_name'] ?></h2>
                         </div>
-<
+
 <!--                        --><?php //$firstMember = array_shift($division['team_members']) ?>
 <!--                        <div class="col-md-12 text-center purple">-->
 <!--                            --><?//= View::make('about/team-member', ['member' => <!-- $firstMember, 'class' => 'purple']) ?>-->
