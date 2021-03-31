@@ -10,7 +10,7 @@
 
 <!--                        --><?php //$firstMember = array_shift($division['team_members']) ?>
 <!--                        <div class="col-md-12 text-center purple">-->
-<!--                            --><?//= View::make('about/team-member', ['member' => $firstMember, 'class' => 'purple']) ?>
+<!--                            --><?//= View::make('about/team-member', ['member' => <!-- $firstMember, 'class' => 'purple']) ?>-->
 <!--                        </div>-->
 
                         <?php $i = 0; ?>
