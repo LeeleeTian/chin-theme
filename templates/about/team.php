@@ -8,10 +8,10 @@
                             <h2 class="heading-red"><?= $division['division_name'] ?></h2>
                         </div>
 
-                        <?php $firstMember = array_shift($division['team_members']) ?>
-                        <div class="col-md-12 text-center purple">
-                            <?= View::make('about/team-member', ['member' => $firstMember, 'class' => 'purple']) ?>
-                        </div>
+<!--                        --><?php //$firstMember = array_shift($division['team_members']) ?>
+<!--                        <div class="col-md-12 text-center purple">-->
+<!--                            --><?//= View::make('about/team-member', ['member' => $firstMember, 'class' => 'purple']) ?>
+<!--                        </div>-->
 
                         <?php $i = 0; ?>
                         <?php foreach ($division['team_members'] as $member): ?>
