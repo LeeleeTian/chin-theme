@@ -12,15 +12,16 @@
 <!--                        <div class="col-md-12 text-center purple">-->
 <!--                            --><?//= View::make('about/team-member', ['member' => <!-- $firstMember, 'class' => 'purple']) ?>-->
 <!--                        </div>-->
-                        <div class="team-box">
+
                         <?php $i = 0; ?>
                         <?php foreach ($division['team_members'] as $member): ?>
                             <?php
                             $class = '';
                             if ($i == 0 || $i % 4 == 0) {
-                                $class = 'red col-md-offset-2';
-                            } elseif ($i % 2 == 0) {
-                                $class = 'green';
+//                                $class = 'red col-md-offset-2';
+                                $class = 'black col-md-offset-2';
+//                            } elseif ($i % 2 == 0) {
+//                                $class = 'green';
                             } else {
                                 $class = 'black';
                             }
@@ -30,7 +31,7 @@
                             </div>
                             <?php $i++; ?>
                         <?php endforeach; ?>
-                        </div>
+
                     </div>
                 </div>
             </div>
