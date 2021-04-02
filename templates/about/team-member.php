@@ -1,6 +1,7 @@
 <?php
-$c = explode(' ', trim($class));
-$class = array_shift($c);
+//$c = explode(' ', trim($class));
+//$class = array_shift($c);
+$class = 'red';
 ?>
 <div class="team__member text-center" data-toggle="modal" data-target=".team__modal"
      data-img="<?= $member['image']['url'] ?>"
