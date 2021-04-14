@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Template Name: Our Services - Individual
  */
@@ -43,6 +44,7 @@ if (!$header) {
 ]) ?>
 <div class="services__individual pc">
     <div class="container">
+
         <div class="row">
             <div class="col-md-2 pc__grey grey1">&nbsp;</div>
             <div class="col-md-3 pc__grey grey2">

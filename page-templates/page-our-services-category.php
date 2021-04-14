@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Template Name: Our Services - Category
  */
@@ -20,8 +21,9 @@ $internationalPhone = get_field('contact_international_phone_number', 'options')
 $email = get_field('contact_email_address', 'options');
 $post_title = get_field('display_title');
 $banner_title = get_field('banner_title');
-$res_title = $post_title == '' ? get_the_title():$post_title;
+$res_title = $post_title == '' ? get_the_title() : $post_title;
 ?>
+
 <?= View::make('page/top_banner', [
     'header' => get_field('top_banner_text'),
     'image'  => get_field('top_banner_image'),
