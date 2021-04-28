@@ -69,41 +69,6 @@
             }
         },
         {
-            "return_format": "array",
-            "library": "all",
-            "min_size": "",
-            "max_size": "",
-            "mime_types": "",
-            "key": "field_5e437dd1c376c",
-            "label": "List Background Video",
-            "name": "cs_background_video",
-            "type": "file",
-            "instructions": "<span class=\"acf-recommended-size\"> <span>345px<\/span><span>335px<\/span><\/span>",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            }
-        },
-        {
-            "default_value": "",
-            "placeholder": "",
-            "key": "field_5e436b8cf1c1e",
-            "label": "List video",
-            "name": "cs_video",
-            "type": "url",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            }
-        },
-        {
             "taxonomy": "true_case_study_tax",
             "field_type": "multi_select",
             "multiple": 0,
@@ -123,33 +88,6 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
-        },
-        {
-            "taxonomy": "true_case_study_service",
-            "field_type": "multi_select",
-            "multiple": 0,
-            "allow_null": 0,
-            "return_format": "id",
-            "add_term": 1,
-            "load_terms": 0,
-            "save_terms": 0,
-            "key": "field_585710cdabb16",
-            "label": "Service",
-            "name": "cs_service",
-            "type": "taxonomy",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "4864": "English to Chinese translation",
-                "4859": "WeChat marketing and management",
-                "4865": "WeChat translation"
             }
         },
         {
@@ -443,6 +381,30 @@
                 "class": "",
                 "id": ""
             }
+        },
+        {
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "key": "field_60822923d7bf0",
+            "label": "new list background",
+            "name": "new_list_background",
+            "type": "image",
+            "instructions": "<span class=\"acf-recommended-size\"> <span>680px<\/span><span>710px<\/span><\/span>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
         }
     ],
     "location": [
@@ -464,5 +426,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1581481446
+    "modified": 1619143074
 }

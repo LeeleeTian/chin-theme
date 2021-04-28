@@ -49,7 +49,8 @@ class TrueCaseStudy
 
     private static function getAll($ids = null)
     {
-        $args = array(  'post_type' => self::$postType,
+        $args = array(
+            'post_type' => self::$postType,
             'numberposts' => -1,
             'post_status' => 'publish',
             'orderby' => 'date',
@@ -140,7 +141,7 @@ class TrueCaseStudy
             'show_ui'                    => true,
             'show_admin_column'          => true,
             'show_in_nav_menus'          => true,
-            'rewrite'                    => array('with_front'=> false, 'slug' => self::$taxSlug),
+            'rewrite'                    => array('with_front' => false, 'slug' => self::$taxSlug),
             'show_tagcloud'              => false,
         );
 
@@ -173,7 +174,7 @@ class TrueCaseStudy
             'show_ui'                    => true,
             'show_admin_column'          => true,
             'show_in_nav_menus'          => true,
-            'rewrite'                    => array('with_front'=> false, 'slug' => $taxSlug),
+            'rewrite'                    => array('with_front' => false, 'slug' => $taxSlug),
             'show_tagcloud'              => false,
         );
 
@@ -184,7 +185,7 @@ class TrueCaseStudy
     {
         if (get_post_type() == self::$postType) {
             if (is_single()) {
-                if ($theme_file = locate_template(array( 'page-templates/' . self::$templateName . '.php' ))) {
+                if ($theme_file = locate_template(array('page-templates/' . self::$templateName . '.php'))) {
                     $template_path = $theme_file;
                 }
             }

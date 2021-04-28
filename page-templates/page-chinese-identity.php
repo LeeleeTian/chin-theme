@@ -1,9 +1,11 @@
 <?php
+
 /**
  * Template Name: Chinese Identity
  */
 
 use Symfony\Component\HttpFoundation\Request;
+
 $request = Request::createFromGlobals();
 
 if ($request->get('term') !== null) {
@@ -46,12 +48,12 @@ $bottomContent = get_field('chinese_identity_content');
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                         <div class="ci__results">
-                            <?php if ($request->get('term') !== null): ?>
+                            <?php if ($request->get('term') !== null) : ?>
                                 Displaying <?= count($posts) ?> Result(s) for:
                                 <span class="ci__results__term"><?= $request->get('term') ?></span>
-                                <?php if (count($posts) > 0): ?>
+                                <?php if (count($posts) > 0) : ?>
                                     <div class="ci__results__translation">
-                                        <?php foreach ($posts as $post): ?>
+                                        <?php foreach ($posts as $post) : ?>
                                             <div class="row">
                                                 <div class="col-sm-6 ci__results__translation__left">
                                                     <?= $post->post_title ?>
@@ -70,7 +72,7 @@ $bottomContent = get_field('chinese_identity_content');
                 </div>
             </div>
         </div>
-        <?php if($bottomContent !== null && trim(strip_tags($bottomContent)) != ''): ?>
+        <?php if ($bottomContent !== null && trim(strip_tags($bottomContent)) != '') : ?>
             <div class="ci__bottom-content">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">

@@ -1,44 +1,49 @@
-<?php foreach ($posts as $post): ?>
-    <div class="our-work__element">
-        <div class="row our-work__element__top">
-            <div class="col-md-6 col-lg-7">
-                <h2 class="pc__content-heading"><?= $post->post_title ?></h2>
-                <h3><?= get_field('cs_subheader', $post) ?></h3>
-                <img src="<?= get_field('cs_client_logo', $post)['url'] ?>" alt="" class="our-work__element__logo img-responsive">
-            </div>
-            <div class="col-md-6 col-lg-5">
-                <?php
-                $video = get_field('cs_video', $post);
-                if ($video) :
-                ?>
-                <div class="our-work__play-link">
-                    <a href="<?= $video ?>" class="play-link red" data-video-popup>
-                        <i class="fa fa-play icon"></i>
-                        <span>Play Video</span>
+        <!-- 这里是每一个case study unit 的预览页内容 -->
+
+        <div class="row">
+            <?php foreach ($posts as $post) : ?>
+                <div class="col-sm-6 col-md-4 col-lg-3 col-lg2-3" style="margin-bottom:25px;">
+
+                    <!-- 这里开始是具体的内容 -->
+                    <a href="<?= get_permalink($post) ?>" class="our-work__element__more">
+                        <div style="position:relative;">
+                            <!-- title -->
+                            <div style="width: 100%;position:absolute;bottom:0;padding-top:5px;" class="top-title-inside">
+                                <span class="case-title" style="font-size: 1.2vw;margin:5px;"><?= $post->post_title ?></span>
+                                <div style="margin:5px;"><span class="btn btn--square"></span></div>
+                            </div>
+
+                            <!-- photo -->
+                            <img src="<?= get_field('cs_background', $post)['url'] ?>" alt="" style="width:100%;">
+                        </div>
                     </a>
+
                 </div>
-                <?php endif; ?>
-                <div class="our-work__element__background">
-                <?php if ($backgroundVideo = get_field('cs_background_video', $post)) : ?>
-                    <video class="video" width="328" autoplay loop muted poster="<?= get_field('cs_background', $post)['url'] ?>">
-                        <source src="<?= $backgroundVideo['url'] ?>" type="<?= $backgroundVideo['mime_type'] ?>" />
-                    </video>
-                <?php else : ?>
-                    <img src="<?= get_field('cs_background', $post)['url'] ?>" alt="" class="img-responsive">
-                <?php endif; ?>
-                </div>
-            </div>
+
+            <?php endforeach; ?>
         </div>
-        <div class="row our-work__element__bottom">
-            <div class="col-md-6 col-lg-7">
-                <p><?= get_field('cs_description', $post) ?></p>
-                <a href="<?= get_permalink($post) ?>" class="our-work__element__more">
-                    <?= Lingo::get('label.find_out_more') ?> <span class="btn btn--square"></span>
-                </a>
-            </div>
-            <div class="col-md-6 col-lg-5">
-                <p class="our-work__element__year"><b><?= Lingo::get('label.year') ?></b> <?= get_field('cs_year', $post) ?></p>
-            </div>
-        </div>
-    </div>
-<?php endforeach; ?>
+
+        <style>
+            /* 适配范围是992开始 */
+            /* 以下是需要隐藏的部分 */
+            @media only screen and (min-width: 992px) {
+                .hide-me {
+                    display: none;
+                }
+
+                .make-me-bigger {
+                    width: 100%;
+                }
+
+                .case-title {
+                    font-size: 1.6vw;
+                }
+
+
+                .top-title-inside {
+                    font-size: 1vw;
+                    color: white;
+                    background-color: rgba(2, 2, 2, .6);
+                }
+            }
+        </style>

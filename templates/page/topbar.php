@@ -26,9 +26,9 @@ $lang = icl_get_languages('skip_missing=0');
                     </li>
                 </ul>
                 <span class="header__top__lang">
-                    <?php if (ICL_LANGUAGE_CODE == 'en'): ?>
+                    <?php if (ICL_LANGUAGE_CODE == 'en') : ?>
                         <a href="<?= isset($lang['zh-hans']) ? $lang['zh-hans']['url'] : '/?lang=zh-hans' ?>">中文</a>
-                    <?php elseif(ICL_LANGUAGE_CODE == 'zh-hans'): ?>
+                    <?php elseif (ICL_LANGUAGE_CODE == 'zh-hans') : ?>
                         <a href="<?= $lang['en']['url'] ?>">EN</a>
                     <?php endif; ?>
                 </span>
