@@ -144,18 +144,16 @@ $services = get_children([
                     <div style="padding:0;margin:0;background-color:red;margin-top:20px;margin-bottom:10px;">
                         <?php foreach ($posts as $post) : ?>
                             <?php if ($post->ID === 8368) : ?>
-                                <a href="<?= get_permalink($post) ?>">
-                                    <!-- 这里开始是具体的内容 -->
-                                    <div style="position:relative;">
-                                        <!-- title -->
-                                        <div style="width: 100%;position:absolute;top:0;padding-top:5px;padding-left:15px; padding-bottom:5px;text-align:left;" class="top-title-inside">
-                                            <span class="case-title" style="font-size: 1.2vw;"><?= $post->post_title ?></span>
-                                        </div>
-                                        <!-- photo -->
-                                        <img src="<?= get_field('new_list_background_2', $post)['url'] ?>" alt="" style="width:100%;">
+                                <!-- 这里开始是具体的内容 -->
+                                <div style="position:relative;">
+                                    <!-- title -->
+                                    <div style="width: 100%;position:absolute;top:0;padding-top:5px;padding-left:15px; padding-bottom:5px;text-align:left;" class="top-title-inside">
+                                        <span class="case-title" style="font-size: 1.2vw;"><?= $post->post_title ?></span>
                                     </div>
-                                    <!-- 具体内容结束 -->
-                                </a>
+                                    <!-- photo -->
+                                    <img src="<?= get_field('new_list_background_2', $post)['url'] ?>" alt="" style="width:100%;">
+                                </div>
+                                <!-- 具体内容结束 -->
 
                             <?php endif; ?>
                         <?php endforeach; ?>
@@ -167,21 +165,19 @@ $services = get_children([
                 <div class="col-md-6 col-lg-6 col-xl-6" style="padding-left: 15px;">
                     <?php foreach ($posts as $post) : ?>
                         <?php if ($post->ID === 8367) : ?>
-                            <a href="<?= get_permalink($post) ?>">
 
-                                <div class="col-md-12  col-lg-12 col-xl-12" style="height:100%; color:white;padding:0px;">
-                                    <!-- 这里开始是具体的内容 -->
-                                    <div style="position:relative;">
-                                        <!-- title -->
-                                        <div style="width: 100%;position:absolute;top:0;padding-top:5px;padding-left:15px; padding-bottom:5px;text-align:left;" class="top-title-inside">
-                                            <span class="case-title" style="font-size: 1.2vw;"><?= $post->post_title ?></span>
-                                        </div>
-                                        <!-- photo -->
-                                        <img src="<?= get_field('new_list_background_1', $post)['url'] ?>" alt="" style="width:100%;">
+                            <div class="col-md-12  col-lg-12 col-xl-12" style="height:100%; color:white;padding:0px;">
+                                <!-- 这里开始是具体的内容 -->
+                                <div style="position:relative;">
+                                    <!-- title -->
+                                    <div style="width: 100%;position:absolute;top:0;padding-top:5px;padding-left:15px; padding-bottom:5px;text-align:left;" class="top-title-inside">
+                                        <span class="case-title" style="font-size: 1.2vw;"><?= $post->post_title ?></span>
                                     </div>
-                                    <!-- 具体内容结束 -->
+                                    <!-- photo -->
+                                    <img src="<?= get_field('new_list_background_1', $post)['url'] ?>" alt="" style="width:100%;">
                                 </div>
-                            </a>
+                                <!-- 具体内容结束 -->
+                            </div>
 
                         <?php endif; ?>
                     <?php endforeach; ?>
@@ -193,20 +189,18 @@ $services = get_children([
             <div class="col-md-4  col-lg-4 col-xl-4 " style="margin-top:20px;">
                 <?php foreach ($posts as $post) : ?>
                     <?php if ($post->ID === 8366) : ?>
-                        <a href="<?= get_permalink($post) ?>">
-                            <div class="col-md-12  col-lg-12 col-xl-12" style="height:100%; padding:0px;">
-                                <!-- 这里开始是具体的内容 -->
-                                <div style="position:relative;">
-                                    <!-- title -->
-                                    <div style="width: 100%;position:absolute;top:0;padding-top:5px;padding-left:15px; padding-bottom:5px;text-align:left;" class="top-title-inside">
-                                        <span class="case-title" style="font-size: 1.2vw;"><?= $post->post_title ?></span>
-                                    </div>
-                                    <!-- photo -->
-                                    <img src="<?= get_field('new_list_background_3', $post)['url'] ?>" alt="" style="width:100%;">
+                        <div class="col-md-12  col-lg-12 col-xl-12" style="height:100%; padding:0px;">
+                            <!-- 这里开始是具体的内容 -->
+                            <div style="position:relative;">
+                                <!-- title -->
+                                <div style="width: 100%;position:absolute;top:0;padding-top:5px;padding-left:15px; padding-bottom:5px;text-align:left;" class="top-title-inside">
+                                    <span class="case-title" style="font-size: 1.2vw;"><?= $post->post_title ?></span>
                                 </div>
-                                <!-- 具体内容结束 -->
+                                <!-- photo -->
+                                <img src="<?= get_field('new_list_background_3', $post)['url'] ?>" alt="" style="width:100%;">
                             </div>
-                        </a>
+                            <!-- 具体内容结束 -->
+                        </div>
 
                     <?php endif; ?>
                 <?php endforeach; ?>
@@ -216,20 +210,18 @@ $services = get_children([
             <div class="col-md-4  col-lg-4 col-xl-4 " style="margin-top:20px;">
                 <?php foreach ($posts as $post) : ?>
                     <?php if ($post->ID === 8365) : ?>
-                        <a href="<?= get_permalink($post) ?>">
-                            <div class="col-md-12  col-lg-12 col-xl-12" style="height:100%;padding:0px;">
-                                <!-- 这里开始是具体的内容 -->
-                                <div style="position:relative;">
-                                    <!-- title -->
-                                    <div style="width: 100%;position:absolute;top:0;padding-top:5px;padding-left:15px; padding-bottom:5px;text-align:left;" class="top-title-inside">
-                                        <span class="case-title" style="font-size: 1.2vw;"><?= $post->post_title ?></span>
-                                    </div>
-                                    <!-- photo -->
-                                    <img src="<?= get_field('new_list_background_4', $post)['url'] ?>" alt="" style="width:100%;">
+                        <div class="col-md-12  col-lg-12 col-xl-12" style="height:100%;padding:0px;">
+                            <!-- 这里开始是具体的内容 -->
+                            <div style="position:relative;">
+                                <!-- title -->
+                                <div style="width: 100%;position:absolute;top:0;padding-top:5px;padding-left:15px; padding-bottom:5px;text-align:left;" class="top-title-inside">
+                                    <span class="case-title" style="font-size: 1.2vw;"><?= $post->post_title ?></span>
                                 </div>
-                                <!-- 具体内容结束 -->
+                                <!-- photo -->
+                                <img src="<?= get_field('new_list_background_4', $post)['url'] ?>" alt="" style="width:100%;">
                             </div>
-                        </a>
+                            <!-- 具体内容结束 -->
+                        </div>
 
                     <?php endif; ?>
                 <?php endforeach; ?>
@@ -239,20 +231,18 @@ $services = get_children([
             <div class="col-md-4  col-lg-4 col-xl-4 " style="margin-top:20px;">
                 <?php foreach ($posts as $post) : ?>
                     <?php if ($post->ID === 8364) : ?>
-                        <a href="<?= get_permalink($post) ?>">
-                            <div class="col-md-12  col-lg-12 col-xl-12" style="height:100%; padding:0px;">
-                                <!-- 这里开始是具体的内容 -->
-                                <div style="position:relative;">
-                                    <!-- title -->
-                                    <div style="width: 100%;position:absolute;top:0;padding-top:5px;padding-left:15px; padding-bottom:5px;text-align:left;" class="top-title-inside">
-                                        <span class="case-title" style="font-size: 1.2vw;"><?= $post->post_title ?></span>
-                                    </div>
-                                    <!-- photo -->
-                                    <img src="<?= get_field('new_list_background_5', $post)['url'] ?>" alt="" style="width:100%;">
+                        <div class="col-md-12  col-lg-12 col-xl-12" style="height:100%; padding:0px;">
+                            <!-- 这里开始是具体的内容 -->
+                            <div style="position:relative;">
+                                <!-- title -->
+                                <div style="width: 100%;position:absolute;top:0;padding-top:5px;padding-left:15px; padding-bottom:5px;text-align:left;" class="top-title-inside">
+                                    <span class="case-title" style="font-size: 1.2vw;"><?= $post->post_title ?></span>
                                 </div>
-                                <!-- 具体内容结束 -->
+                                <!-- photo -->
+                                <img src="<?= get_field('new_list_background_5', $post)['url'] ?>" alt="" style="width:100%;">
                             </div>
-                        </a>
+                            <!-- 具体内容结束 -->
+                        </div>
 
                     <?php endif; ?>
                 <?php endforeach; ?>
