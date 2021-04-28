@@ -6,14 +6,14 @@
         <?php foreach ($posts as $post) : ?>
             <div class="col-md-3 col-lg-3 col-lg2-3">
                 <li class="resources__item">
-                    <div class="row" style="height:500px;position:relative;overflow:hidden;border:2px solid white;">
-
-                        <h2 class="resources__title"><?= $post->post_title ?></h2>
-                        <p class="resources__excerpt">
-                            <?= get_field('resource_excerpt', $post) ?>
-                        </p>
+                    <div class="row" style="position:relative;border:2px solid white;">
+                        <!-- 上方标题 -->
+                        <div style="width: 100%;position:absolute;top:0;padding-top:5px; padding-bottom:5px;text-align:center; background-color: rgba(2, 2, 2, .6);color:white;" class="top-title-inside">
+                            <span style="font-size: 1vw;"><?= $post->post_title ?></span>
+                        </div>
+                        <img src="<?= get_field('resource_image', $post)['url'] ?>" alt="" style="width:100%;">
                         <!-- 底部链接 -->
-                        <div class="col-md-12 resources__overlay" style="width:100%;position:absolute;bottom:0;">
+                        <div class="col-md-12 resources__overlay" style="width:100%;">
                             <?php
                             $pdf = get_field('resource_pdf', $post);
                             $relatedWork = get_field('resource_related_work', $post);

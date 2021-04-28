@@ -26,8 +26,16 @@ if (
 }
 
 // 这里修改cases study 数量限制
+//得到指定分类的study case
 $params = [
-    'posts_per_page' => 8,
+    'tax_query' =>
+    array(
+        array(
+            'taxonomy' => 'true_case_study_tax',  //这里自定义了taxonomy
+            'terms'    => 67
+        ),
+    ),
+    'posts_per_page' => 5,
     'post_type' => 'true_case_study',
     'post_status' => 'publish',
     'orderby' => 'menu_order',
@@ -86,14 +94,15 @@ $posts = get_posts($params);
 $params['posts_per_page'] = -1;
 $totalPosts = count(get_posts($params));
 
-//pink bottom banner
-$backgroundVideo = get_field('bottom_banner_pink');
+
+//first bottom banner
+$backgroundVideo = get_field('communication_and_service_page_bottom_banner_no_1');
 // Use preg_match to find iframe src.
 preg_match('/src="(.+?)"/', $backgroundVideo, $matches);
 $src = $matches[1];  //pink video link address
 
-//grey bottom banner
-$backgroundVideo2 = get_field('bottom_banner_grey');
+//second bottom banner
+$backgroundVideo2 = get_field('communication_and_service_page_bottom_banner_no_2');
 // Use preg_match to find iframe src2.
 preg_match('/src="(.+?)"/', $backgroundVideo2, $matches2);
 $src2 = $matches2[1];
@@ -110,43 +119,153 @@ $services = get_children([
     'post_status' => 'publish'
 ]);
 
+// $image = get_field('sb_image');  //second banner image
+
 ?>
+
 
 <!-- 页面开始 -->
 <div class="services">
-    <div class="container">
+    <div class="container" style="width:100%;">
+        <h1 style="text-align:left;font-weight:bold;font-size:2.88vw;margin-left:0.5vw;">Featured Work</h1>
+        <div class="row" style="margin: 0px;padding:8px;">
+            <!-- 上面一排 左右-->
+            <div class="col-md-12  col-lg-12 col-xl-12" style="height:100%; padding:0px;position:relative;">
+                <!-- 左边块上下 -->
+                <div class="col-md-6 col-lg-6 col-xl-6" style="padding:0;height:100%;padding-right:9px;padding-left:9px;">
+                    <!-- 灰色块 -->
+                    <div class="grey-area" style="padding-bottom:50%;height:0; text-align:left;background-color:rgb(60,52,56);margin:0px;position:relative;">
+                        <div style="position: absolute;bottom:25%;left:4%;font-size:2.88vw;">
+                            <span>Chin your China ready marketing agency: <span style="font-weight: 300;">helping you win in the Chinese market</span></span>
+                        </div>
+                    </div>
+                    <!-- 灰色块结束-->
+                    <!-- 2号小块 -->
+                    <div style="padding:0;margin:0;background-color:red;margin-top:20px;margin-bottom:10px;">
+                        <?php foreach ($posts as $post) : ?>
+                            <?php if ($post->ID === 8368) : ?>
+                                <a href="<?= get_permalink($post) ?>">
+                                    <!-- 这里开始是具体的内容 -->
+                                    <div style="position:relative;">
+                                        <!-- title -->
+                                        <div style="width: 100%;position:absolute;top:0;padding-top:5px;padding-left:15px; padding-bottom:5px;text-align:left;" class="top-title-inside">
+                                            <span class="case-title" style="font-size: 1.2vw;"><?= $post->post_title ?></span>
+                                        </div>
+                                        <!-- photo -->
+                                        <img src="<?= get_field('new_list_background_2', $post)['url'] ?>" alt="" style="width:100%;">
+                                    </div>
+                                    <!-- 具体内容结束 -->
+                                </a>
 
-        <h1 style="width:100%;text-align:center;">Featured Work</h1>
-        <div class="row">
-            <div class="red-area2 embed-responsive" style="position: relative;">
-                <div class="red-area-inside" style="position: absolute;">
-                    <span>Chin your China ready marketing agency: helping you succeed in the Chinese market</span>
+                            <?php endif; ?>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+                <!-- 左边块上下结束 -->
+
+                <!-- 1号小块 灰色右边-->
+                <div class="col-md-6 col-lg-6 col-xl-6" style="padding-left: 15px;">
+                    <?php foreach ($posts as $post) : ?>
+                        <?php if ($post->ID === 8367) : ?>
+                            <a href="<?= get_permalink($post) ?>">
+
+                                <div class="col-md-12  col-lg-12 col-xl-12" style="height:100%; color:white;padding:0px;">
+                                    <!-- 这里开始是具体的内容 -->
+                                    <div style="position:relative;">
+                                        <!-- title -->
+                                        <div style="width: 100%;position:absolute;top:0;padding-top:5px;padding-left:15px; padding-bottom:5px;text-align:left;" class="top-title-inside">
+                                            <span class="case-title" style="font-size: 1.2vw;"><?= $post->post_title ?></span>
+                                        </div>
+                                        <!-- photo -->
+                                        <img src="<?= get_field('new_list_background_1', $post)['url'] ?>" alt="" style="width:100%;">
+                                    </div>
+                                    <!-- 具体内容结束 -->
+                                </div>
+                            </a>
+
+                        <?php endif; ?>
+                    <?php endforeach; ?>
                 </div>
             </div>
 
-        </div>
-        <?php foreach ($posts as $post) : ?>
-            <div class="col-sm-6 col-md-4 col-lg-3 col-lg2-3" style="margin-bottom:25px;">
 
-                <!-- 这里开始是具体的内容 -->
-                <a href="<?= get_permalink($post) ?>" class="our-work__element__more">
-                    <div style="position:relative;">
-                        <!-- title -->
-                        <div style="width: 100%;position:absolute;bottom:0;padding-top:5px;padding-bottom:5px;" class="top-title-inside">
-                            <span class="case-title" style="font-size: 1.2vw;"><?= $post->post_title ?></span>
-                        </div>
-                        <!-- photo -->
-                        <img src="<?= get_field('cs_background', $post)['url'] ?>" alt="" style="width:100%;">
-                    </div>
-                </a>
+            <!-- 3号小块 -->
+            <div class="col-md-4  col-lg-4 col-xl-4 " style="margin-top:20px;">
+                <?php foreach ($posts as $post) : ?>
+                    <?php if ($post->ID === 8366) : ?>
+                        <a href="<?= get_permalink($post) ?>">
+                            <div class="col-md-12  col-lg-12 col-xl-12" style="height:100%; padding:0px;">
+                                <!-- 这里开始是具体的内容 -->
+                                <div style="position:relative;">
+                                    <!-- title -->
+                                    <div style="width: 100%;position:absolute;top:0;padding-top:5px;padding-left:15px; padding-bottom:5px;text-align:left;" class="top-title-inside">
+                                        <span class="case-title" style="font-size: 1.2vw;"><?= $post->post_title ?></span>
+                                    </div>
+                                    <!-- photo -->
+                                    <img src="<?= get_field('new_list_background_3', $post)['url'] ?>" alt="" style="width:100%;">
+                                </div>
+                                <!-- 具体内容结束 -->
+                            </div>
+                        </a>
+
+                    <?php endif; ?>
+                <?php endforeach; ?>
             </div>
 
-        <?php endforeach; ?>
-        <!-- end foreach cases -->
+            <!-- 4号小块 -->
+            <div class="col-md-4  col-lg-4 col-xl-4 " style="margin-top:20px;">
+                <?php foreach ($posts as $post) : ?>
+                    <?php if ($post->ID === 8365) : ?>
+                        <a href="<?= get_permalink($post) ?>">
+                            <div class="col-md-12  col-lg-12 col-xl-12" style="height:100%;padding:0px;">
+                                <!-- 这里开始是具体的内容 -->
+                                <div style="position:relative;">
+                                    <!-- title -->
+                                    <div style="width: 100%;position:absolute;top:0;padding-top:5px;padding-left:15px; padding-bottom:5px;text-align:left;" class="top-title-inside">
+                                        <span class="case-title" style="font-size: 1.2vw;"><?= $post->post_title ?></span>
+                                    </div>
+                                    <!-- photo -->
+                                    <img src="<?= get_field('new_list_background_4', $post)['url'] ?>" alt="" style="width:100%;">
+                                </div>
+                                <!-- 具体内容结束 -->
+                            </div>
+                        </a>
+
+                    <?php endif; ?>
+                <?php endforeach; ?>
+            </div>
+
+            <!-- 5号小块 -->
+            <div class="col-md-4  col-lg-4 col-xl-4 " style="margin-top:20px;">
+                <?php foreach ($posts as $post) : ?>
+                    <?php if ($post->ID === 8364) : ?>
+                        <a href="<?= get_permalink($post) ?>">
+                            <div class="col-md-12  col-lg-12 col-xl-12" style="height:100%; padding:0px;">
+                                <!-- 这里开始是具体的内容 -->
+                                <div style="position:relative;">
+                                    <!-- title -->
+                                    <div style="width: 100%;position:absolute;top:0;padding-top:5px;padding-left:15px; padding-bottom:5px;text-align:left;" class="top-title-inside">
+                                        <span class="case-title" style="font-size: 1.2vw;"><?= $post->post_title ?></span>
+                                    </div>
+                                    <!-- photo -->
+                                    <img src="<?= get_field('new_list_background_5', $post)['url'] ?>" alt="" style="width:100%;">
+                                </div>
+                                <!-- 具体内容结束 -->
+                            </div>
+                        </a>
+
+                    <?php endif; ?>
+                <?php endforeach; ?>
+            </div>
+
+
+        </div>
+
+
     </div>
-    <!-- pink banner -->
-    <div class="row">
-        <div class="red-area2 embed-responsive" style="position: relative;">
+    <!-- first bottom banner -->
+    <div class="row" style="margin-top: 2.88vw;">
+        <div class="red-area2 embed-responsive" style="position: relative;background-color:rgb(60,52,56);height:495px;margin-right:0;margin-left:0;">
             <?php if ($src) : ?>
                 <!-- The video -->
                 <video autoplay muted loop class="myVideo" class="embed-responsive-item">
@@ -154,36 +273,43 @@ $services = get_children([
                 </video>
             <?php endif;  ?>
 
-            <div class="red-area-inside" style="position: absolute;">
-                <span>Helping brands develop their strategy to enter China's fast evolving market</span>
-                <div class="find_more">find out more</div>
-            </div>
+            <?php if (!$src) : ?>
+                <div style="position: absolute;width:70%;text-align:center;font-size:2.88vw;">
+                    <span>Helping brands develop their strategy to enter China's fast evolving market</span>
+                    <div class="find_more">find out more</div>
+                </div>
+            <?php endif;  ?>
+
         </div>
 
     </div>
-    <!-- grey banner-->
-    <div class="row">
-        <div class="red-area2 embed-responsive" style="background-color: #f1f1f1;color:black;position: relative;">
-            <?php if ($src2) : ?>
+    <!-- second bottom banner-->
+    <div class="row" style="margin-bottom: 2.88vw;">
+        <?php if ($src2) : ?>
+            <div class="red-area2 embed-responsive" style="color:black;position: relative;height:495px;text-align:center;">
+
                 <!-- The video -->
                 <video autoplay muted loop class="myVideo" class="embed-responsive-item">
                     <source src=<?= $src2 ?> type="video/mp4">
                 </video>
-            <?php endif;  ?>
-
-            <div class="red-area-inside" style="position: absolute;">
-                <span>China Market Research | China Strategy</span><br>
-                <span>Wechat Managment | Branding and Communication Design</span>
-                <div class="find_more">find out more</div>
             </div>
-        </div>
+
+        <?php endif;  ?>
+
+        <?php if (!$src) : ?>
+            <div class="red-area2 embed-responsive" style="color:black;position: relative;height:495px;text-align:center;background-image: url('https://localhost/wordpress2/wp-content/uploads/2021/04/微信图片_20210428090821.jpg');">
+
+                <div style="position: absolute;width:90%;top:5%;text-align:center;font-size:2.88vw;">
+                    <span>China Market Research | China Strategy</span><br>
+                    <span>Wechat Management | Branding and Communication Design</span>
+                    <div class="find_more" style="border-color:black; width: 47%;">find out more</div>
+                </div>
+            </div>
+        <?php endif;  ?>
+
     </div>
-    <!-- banner content start -->
 
 
-
-    <!-- banner content end -->
-</div>
 </div>
 
 <style>
@@ -214,23 +340,31 @@ $services = get_children([
 
     .red-area2 {
         padding: 20px;
-        text-align: center;
-        margin: 15px;
         height: 300px;
-        font-size: 1.5vw;
+        font-size: 2vw;
         color: white;
-        background-color: #f65057;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .grey-area {
+        font-size: 2vw;
+        color: white;
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
     .red-area2 .find_more {
-        width: 25%;
-        height: 35px;
+        width: 60%;
+        /* height: 35px; */
         border: 2px solid white;
         text-align: center;
         margin: 10px auto;
+        padding: 1vw;
+        text-transform: uppercase;
+        line-height: 2.88vw;
     }
 
     .myVideo {
