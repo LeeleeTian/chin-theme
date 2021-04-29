@@ -214,8 +214,8 @@ $services = get_children([
                             <!-- 这里开始是具体的内容 -->
                             <div style="position:relative;">
                                 <!-- title -->
-                                <div style="width: 100%;position:absolute;top:0;padding-top:5px;padding-left:15px; padding-bottom:5px;text-align:left;" class="top-title-inside">
-                                    <span class="case-title" style="font-size: 1.2vw;"><?= $post->post_title ?></span>
+                                <div class="top-title-inside grey1">
+                                    <span class="case-title span1"><?= $post->post_title ?></span>
                                 </div>
                                 <!-- photo -->
                                 <img src="<?= get_field('new_list_background_4', $post)['url'] ?>" alt="" style="width:100%;">
@@ -305,7 +305,7 @@ $services = get_children([
 <style>
     /* 适配范围是992开始 */
     /* 以下是需要隐藏的部分 */
-    @media only screen and (min-width: 992px) {}
+    @media only screen and (max-width: 992px) {}
 
     .case-title {
         font-size: 1.6vw;
@@ -359,6 +359,20 @@ $services = get_children([
 
     .myVideo {
         object-fit: cover;
+    }
+
+    .grey1 {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        padding-top: 5px;
+        padding-left: 15px;
+        padding-bottom: 5px;
+        text-align: left;
+    }
+
+    .span1 {
+        font-size: 1.2vw;
     }
 </style>
 <script>
