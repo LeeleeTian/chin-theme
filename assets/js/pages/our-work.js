@@ -6,17 +6,18 @@
 
     OurWork.prototype.init = function () {
         var self = this
+        //load more button
         $('.our-work__pagination a').click(function () {
             var $a = $(this);
             var industires = [];
             var services = [];
             $(".pc__nav a.our-work__industry.active").each(function () {
-                industires.push(($(this).data('term-id')));
+                industires.push(($(this).data('term-id')));  //根据id查询industry, 如果有选择就放进去查询
             });
             $(".pc__nav a.our-work__service.active").each(function () {
                 services.push(($(this).data('term-id')));
             });
-            var params = 'action=our-work_pagination&page=' + $a.attr('href');
+            var params = 'action=our-work_pagination&page=' + $a.attr('href');  //load more 的url查询
             if (industires.length) {
                 params += '&industry=' + industires.join(',')
             }

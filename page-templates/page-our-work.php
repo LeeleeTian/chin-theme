@@ -19,7 +19,6 @@ if (isset($_GET['lang']) && $_GET['lang'] == 'zh-hans') {
 <div class="our-work pc">
     <div class="container">
         <div class="row">
-            <!-- <div class="col-md-2 pc__grey grey1" style="background-color: red;">&nbsp;</div> -->
             <div class="col-md-3 pc__grey grey2">
                 <?= View::make('page/sidebar', [
                     'menu' => View::make('case-studies/menu')
