@@ -148,7 +148,7 @@ $services = get_children([
                                 <div style="position:relative;">
                                     <!-- title -->
                                     <div style="width: 100%;position:absolute;top:0;padding-top:5px;padding-left:15px; padding-bottom:5px;text-align:left;" class="top-title-inside">
-                                        <span class="case-title" style="font-size: 1.2vw;"><?= $post->post_title ?></span>
+                                        <span class="case-title span2"><?= $post->post_title ?></span>
                                     </div>
                                     <!-- photo -->
                                     <img src="<?= get_field('new_list_background_2', $post)['url'] ?>" alt="" style="width:100%;">
@@ -171,7 +171,7 @@ $services = get_children([
                                 <div style="position:relative;">
                                     <!-- title -->
                                     <div style="width: 100%;position:absolute;top:0;padding-top:5px;padding-left:15px; padding-bottom:5px;text-align:left;" class="top-title-inside">
-                                        <span class="case-title" style="font-size: 1.2vw;"><?= $post->post_title ?></span>
+                                        <span class="case-title span2"><?= $post->post_title ?></span>
                                     </div>
                                     <!-- photo -->
                                     <img src="<?= get_field('new_list_background_1', $post)['url'] ?>" alt="" style="width:100%;">
@@ -194,7 +194,7 @@ $services = get_children([
                             <div style="position:relative;">
                                 <!-- title -->
                                 <div style="width: 100%;position:absolute;top:0;padding-top:5px;padding-left:15px; padding-bottom:5px;text-align:left;" class="top-title-inside">
-                                    <span class="case-title" style="font-size: 1.2vw;"><?= $post->post_title ?></span>
+                                    <span class="case-title span2"><?= $post->post_title ?></span>
                                 </div>
                                 <!-- photo -->
                                 <img src="<?= get_field('new_list_background_3', $post)['url'] ?>" alt="" style="width:100%;">
@@ -215,7 +215,7 @@ $services = get_children([
                             <div style="position:relative;">
                                 <!-- title -->
                                 <div style="width: 100%;position:absolute;top:0;padding-top:5px;padding-left:15px; padding-bottom:5px;text-align:left;" class="top-title-inside">
-                                    <span class="case-title" style="font-size: 1.2vw;"><?= $post->post_title ?></span>
+                                    <span class="case-title span2"><?= $post->post_title ?></span>
                                 </div>
                                 <!-- photo -->
                                 <img src="<?= get_field('new_list_background_4', $post)['url'] ?>" alt="" style="width:100%;">
@@ -236,7 +236,7 @@ $services = get_children([
                             <div style="position:relative;">
                                 <!-- title -->
                                 <div style="width: 100%;position:absolute;top:0;padding-top:5px;padding-left:15px; padding-bottom:5px;text-align:left;" class="top-title-inside">
-                                    <span class="case-title" style="font-size: 1.2vw;"><?= $post->post_title ?></span>
+                                    <span class="case-title span2"><?= $post->post_title ?></span>
                                 </div>
                                 <!-- photo -->
                                 <img src="<?= get_field('new_list_background_5', $post)['url'] ?>" alt="" style="width:100%;">
@@ -264,7 +264,7 @@ $services = get_children([
             <?php endif;  ?>
 
             <?php if (!$src) : ?>
-                <div style="position: absolute;width:70%;text-align:center;font-size:2.5vw;">
+                <div class="span2" style="position: absolute;width:70%;text-align:center;">
                     <span>Helping brands develop their strategy to enter China's fast evolving market</span>
                     <div class="find_more">find out more</div>
                 </div>
@@ -289,7 +289,7 @@ $services = get_children([
         <?php if (!$src) : ?>
             <div class="red-area2 embed-responsive" style="color:black;position: relative;height:495px;text-align:center;background-image: url('https://www.chincommunications.com.au/wp-content/uploads/2021/04/微信图片_20210428090821.jpg');">
 
-                <div style="position: absolute;width:90%;top:5%;text-align:center;font-size:2.5vw;">
+                <div class="span2" style="position: absolute;width:90%;top:5%;text-align:center;">
                     <span>China Market Research | China Strategy</span><br>
                     <span>Wechat Management | Branding and Communication Design</span>
                     <div class="find_more" style="border-color:black; width: 47%;">find out more</div>
@@ -376,6 +376,10 @@ $services = get_children([
         margin-top: 15%;
         margin-left: 10%;
         margin-right: 5%;
+    }
+
+    .span2 {
+        font-size: 18px;
     }
 </style>
 <script>
