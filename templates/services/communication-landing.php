@@ -134,8 +134,8 @@ $services = get_children([
                 <!-- 左边块上下 -->
                 <div class="col-md-6 col-lg-6 col-xl-6" style="padding:0;height:100%;padding-right:9px;padding-left:9px;">
                     <!-- 灰色块 -->
-                    <div class="grey-area" style="padding-bottom:50%;height:0; text-align:left;background-color:rgb(60,52,56);margin:0px;position:relative;">
-                        <span style="height:100%;font-size:2.5vw;margin-top:15%;margin-left:10%;margin-right:5%;">
+                    <div class="grey-area grey1">
+                        <span class="span1">
                             <span>Chin your China ready marketing agency: <span style="font-weight: 300;">helping you win in the Chinese market</span></span>
                         </span>
                     </div>
@@ -214,8 +214,8 @@ $services = get_children([
                             <!-- 这里开始是具体的内容 -->
                             <div style="position:relative;">
                                 <!-- title -->
-                                <div class="top-title-inside grey1">
-                                    <span class="case-title span1"><?= $post->post_title ?></span>
+                                <div style="width: 100%;position:absolute;top:0;padding-top:5px;padding-left:15px; padding-bottom:5px;text-align:left;" class="top-title-inside">
+                                    <span class="case-title" style="font-size: 1.2vw;"><?= $post->post_title ?></span>
                                 </div>
                                 <!-- photo -->
                                 <img src="<?= get_field('new_list_background_4', $post)['url'] ?>" alt="" style="width:100%;">
@@ -305,7 +305,7 @@ $services = get_children([
 <style>
     /* 适配范围是992开始 */
     /* 以下是需要隐藏的部分 */
-    @media only screen and (max-width: 992px) {}
+    @media only screen and (min-width: 992px) {}
 
     .case-title {
         font-size: 1.6vw;
@@ -362,17 +362,20 @@ $services = get_children([
     }
 
     .grey1 {
-        width: 100%;
-        position: absolute;
-        top: 0;
-        padding-top: 5px;
-        padding-left: 15px;
-        padding-bottom: 5px;
+        padding-bottom: 50%;
+        height: 0;
         text-align: left;
+        background-color: rgb(60, 52, 56);
+        margin: 0px;
+        position: relative;
     }
 
     .span1 {
-        font-size: 1.2vw;
+        height: 100%;
+        font-size: 2.5vw;
+        margin-top: 15%;
+        margin-left: 10%;
+        margin-right: 5%;
     }
 </style>
 <script>
