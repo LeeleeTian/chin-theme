@@ -9,7 +9,7 @@
                         <div style="position:relative;">
                             <!-- title -->
                             <div style="width: 100%;position:absolute;bottom:0;padding-top:5px;" class="top-title-inside">
-                                <span class="case-title" style="font-size: 1.2vw;margin:5px;"><?= $post->post_title ?></span>
+                                <span style="margin:5px;"><?= $post->post_title ?></span>
                                 <div style="margin:5px;"><span class="btn btn--square"></span></div>
                             </div>
 
@@ -35,15 +35,15 @@
                     width: 100%;
                 }
 
-                .case-title {
-                    font-size: 1.6vw;
-                }
 
 
-                .top-title-inside {
-                    font-size: 1vw;
-                    color: white;
-                    background-color: rgba(2, 2, 2, .6);
-                }
+
+
+            }
+
+            .top-title-inside {
+                font-size: 18px;
+                color: white;
+                background-color: rgba(2, 2, 2, .6);
             }
         </style>

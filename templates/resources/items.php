@@ -9,7 +9,7 @@
                     <div class="row" style="position:relative;border:2px solid white;">
                         <!-- 上方标题 -->
                         <div style="width: 100%;position:absolute;top:0;padding-top:5px; padding-bottom:5px;text-align:center; background-color: rgba(2, 2, 2, .6);color:white;" class="top-title-inside">
-                            <span style="font-size: 1vw;"><?= $post->post_title ?></span>
+                            <span class="top-inside-font"><?= $post->post_title ?></span>
                         </div>
                         <img src="<?= get_field('resource_image', $post)['url'] ?>" alt="" style="width:100%;">
                         <!-- 底部链接 -->
@@ -55,7 +55,7 @@
 
 
         .r-make-me-bigger {
-            width: 100%;
+            font-size: 5vw;
         }
 
         .r-case-title {
@@ -63,5 +63,10 @@
         }
 
 
+    }
+
+
+    .top-inside-font {
+        font-size: 20px;
     }
 </style>

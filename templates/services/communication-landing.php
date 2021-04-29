@@ -135,9 +135,9 @@ $services = get_children([
                 <div class="col-md-6 col-lg-6 col-xl-6" style="padding:0;height:100%;padding-right:9px;padding-left:9px;">
                     <!-- 灰色块 -->
                     <div class="grey-area" style="padding-bottom:50%;height:0; text-align:left;background-color:rgb(60,52,56);margin:0px;position:relative;">
-                        <div style="position: absolute;bottom:25%;left:4%;font-size:2.88vw;">
+                        <span style="height:100%;font-size:2.5vw;margin-top:30%;margin-left:10%;">
                             <span>Chin your China ready marketing agency: <span style="font-weight: 300;">helping you win in the Chinese market</span></span>
-                        </div>
+                        </span>
                     </div>
                     <!-- 灰色块结束-->
                     <!-- 2号小块 -->
@@ -264,7 +264,7 @@ $services = get_children([
             <?php endif;  ?>
 
             <?php if (!$src) : ?>
-                <div style="position: absolute;width:70%;text-align:center;font-size:2.88vw;">
+                <div style="position: absolute;width:70%;text-align:center;font-size:2.7vw;">
                     <span>Helping brands develop their strategy to enter China's fast evolving market</span>
                     <div class="find_more">find out more</div>
                 </div>
@@ -289,7 +289,7 @@ $services = get_children([
         <?php if (!$src) : ?>
             <div class="red-area2 embed-responsive" style="color:black;position: relative;height:495px;text-align:center;background-image: url('https://www.chincommunications.com.au/wp-content/uploads/2021/04/微信图片_20210428090821.jpg');">
 
-                <div style="position: absolute;width:90%;top:5%;text-align:center;font-size:2.88vw;">
+                <div style="position: absolute;width:90%;top:5%;text-align:center;font-size:2.7vw;">
                     <span>China Market Research | China Strategy</span><br>
                     <span>Wechat Management | Branding and Communication Design</span>
                     <div class="find_more" style="border-color:black; width: 47%;">find out more</div>
