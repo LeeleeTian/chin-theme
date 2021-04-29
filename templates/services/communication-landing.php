@@ -127,7 +127,7 @@ $services = get_children([
 <!-- 页面开始 -->
 <div class="services container">
     <div style="width:100%;">
-        <h1 style="text-align:left;font-weight:bold;font-size:2.88vw;margin-left:0.5vw;">Featured Work</h1>
+        <h1 style="text-align:left;font-weight:bold;margin-left:0.5vw;" class="span3">Featured Work</h1>
         <div class="row" style="margin: 0px;padding:8px;">
             <!-- 上面一排 左右-->
             <div class="col-md-12  col-lg-12 col-xl-12" style="height:100%; padding:0px;position:relative;">
@@ -380,6 +380,10 @@ $services = get_children([
 
     .span2 {
         font-size: 18px;
+    }
+
+    .span3 {
+        font-size: 38px;
     }
 </style>
 <script>
