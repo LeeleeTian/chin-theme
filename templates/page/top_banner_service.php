@@ -24,7 +24,7 @@ $poster = get_field('video_poster');
     <!-- <video class="video video-size-fit">
         <source src="https://www.chincommunications.com.au/wp-content/uploads/2021/05/Chin-Marketing-Overview-Final.mp4" type="<?= $backgroundVideo['mime_type'] ?>" />
     </video> -->
-    <video class="video video-size-fit" preload loop poster="https://www.chincommunications.com.au/wp-content/uploads/2021/04/1-Marketing-Landing-Page-1410x792-1.jpg">
+    <video class="video video-size-fit" preload loop playsinline poster="https://www.chincommunications.com.au/wp-content/uploads/2021/04/1-Marketing-Landing-Page-1410x792-1.jpg">
         <source src="https://www.chincommunications.com.au/wp-content/uploads/2021/05/Chin-Marketing-Overview-Final.mp4" type="<?= $backgroundVideo['mime_type'] ?>" />
     </video>
     <button class="play-link">
