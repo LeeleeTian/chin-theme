@@ -22,7 +22,7 @@ $poster = get_field('video_poster');
 
 <div class=" top-banner container">
     <video class="video video-size-fit" autoplay loop muted>
-        <source src="https://www.chincommunications.com.au/wp-content/uploads/2021/04/1-Marketing-Landing-Page-1410x792-1.mp4" type="<?= $backgroundVideo['mime_type'] ?>" />
+        <source src="https://www.chincommunications.com.au/wp-content/uploads/2021/05/Chin-Marketing-Overview-Final.mp4" type="<?= $backgroundVideo['mime_type'] ?>" />
     </video>
 </div>
 

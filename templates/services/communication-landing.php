@@ -144,6 +144,7 @@ $services = get_children([
                     <div style="padding:0;margin:0;background-color:red;margin-top:20px;margin-bottom:10px;">
                         <?php foreach ($posts as $post) : ?>
                             <?php if ($post->ID === 8368) : ?>
+                            <a href="<?= get_permalink($post)?>">
                                 <!-- 这里开始是具体的内容 -->
                                 <div style="position:relative;">
                                     <!-- title -->
@@ -154,6 +155,7 @@ $services = get_children([
                                     <img src="<?= get_field('new_list_background_2', $post)['url'] ?>" alt="" style="width:100%;">
                                 </div>
                                 <!-- 具体内容结束 -->
+                            </a>
 
                             <?php endif; ?>
                         <?php endforeach; ?>
@@ -165,7 +167,7 @@ $services = get_children([
                 <div class="col-md-6 col-lg-6 col-xl-6" style="padding-left: 15px;">
                     <?php foreach ($posts as $post) : ?>
                         <?php if ($post->ID === 8367) : ?>
-
+                            <a href="<?= get_permalink($post)?>">
                             <div class="col-md-12  col-lg-12 col-xl-12" style="height:100%; color:white;padding:0px;">
                                 <!-- 这里开始是具体的内容 -->
                                 <div style="position:relative;">
@@ -178,7 +180,7 @@ $services = get_children([
                                 </div>
                                 <!-- 具体内容结束 -->
                             </div>
-
+                            </a>
                         <?php endif; ?>
                     <?php endforeach; ?>
                 </div>
@@ -189,6 +191,7 @@ $services = get_children([
             <div class="col-md-4  col-lg-4 col-xl-4 " style="margin-top:20px;">
                 <?php foreach ($posts as $post) : ?>
                     <?php if ($post->ID === 8366) : ?>
+                        <a href="<?= get_permalink($post)?>">
                         <div class="col-md-12  col-lg-12 col-xl-12" style="height:100%; padding:0px;">
                             <!-- 这里开始是具体的内容 -->
                             <div style="position:relative;">
@@ -201,7 +204,7 @@ $services = get_children([
                             </div>
                             <!-- 具体内容结束 -->
                         </div>
-
+                    </a>
                     <?php endif; ?>
                 <?php endforeach; ?>
             </div>
@@ -210,6 +213,7 @@ $services = get_children([
             <div class="col-md-4  col-lg-4 col-xl-4 " style="margin-top:20px;">
                 <?php foreach ($posts as $post) : ?>
                     <?php if ($post->ID === 8365) : ?>
+                        <a href="<?= get_permalink($post)?>">
                         <div class="col-md-12  col-lg-12 col-xl-12" style="height:100%;padding:0px;">
                             <!-- 这里开始是具体的内容 -->
                             <div style="position:relative;">
@@ -222,7 +226,7 @@ $services = get_children([
                             </div>
                             <!-- 具体内容结束 -->
                         </div>
-
+                        </a>
                     <?php endif; ?>
                 <?php endforeach; ?>
             </div>
@@ -231,6 +235,7 @@ $services = get_children([
             <div class="col-md-4  col-lg-4 col-xl-4 " style="margin-top:20px;">
                 <?php foreach ($posts as $post) : ?>
                     <?php if ($post->ID === 8364) : ?>
+                        <a href="<?= get_permalink($post)?>">
                         <div class="col-md-12  col-lg-12 col-xl-12" style="height:100%; padding:0px;">
                             <!-- 这里开始是具体的内容 -->
                             <div style="position:relative;">
@@ -243,7 +248,7 @@ $services = get_children([
                             </div>
                             <!-- 具体内容结束 -->
                         </div>
-
+                    </a>
                     <?php endif; ?>
                 <?php endforeach; ?>
             </div>
@@ -266,7 +271,9 @@ $services = get_children([
             <?php if (!$src) : ?>
                 <div class="span2" style="position: absolute;width:70%;text-align:center;">
                     <span>Helping brands develop their strategy to enter China's fast evolving market</span>
-                    <div class="find_more">find out more</div>
+                   <a href="https://www.chincommunications.com.au/home/communication-and-marketing-services/china-strategy/" class="remove-link-line"> 
+                   <div class="find_more">find out more</div>
+                   </a>
                 </div>
             <?php endif;  ?>
 
@@ -292,7 +299,9 @@ $services = get_children([
                 <div class="span2" style="position: absolute;width:90%;top:5%;text-align:center;">
                     <span>China Market Research | China Strategy</span><br>
                     <span>Wechat Management | Branding and Communication Design</span>
-                    <div class="find_more" style="border-color:black; width: 47%;">find out more</div>
+                    <a href="https://www.chincommunications.com.au/home/communication-and-marketing-services/chinese-marketing-and-advertising/" class="remove-link-line">
+                    <div class="find_more" style="border-color:black; width: 47%;color:#000000;">find out more</div>
+                    </a>
                 </div>
             </div>
         <?php endif;  ?>
@@ -385,6 +394,22 @@ $services = get_children([
     .span3 {
         font-size: 38px;
     }
+   
+    a.remove-link-line:link {
+        text-decoration: none;
+    }
+
+    a.remove-link-line:visited {
+        text-decoration: none;
+    }
+
+    a.remove-link-line:hover {
+        text-decoration: none;
+    }
+
+    a.remove-link-line:active {
+        text-decoration: none;
+    } 
 </style>
 <script>
 
