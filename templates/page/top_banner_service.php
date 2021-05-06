@@ -21,8 +21,8 @@ $poster = get_field('video_poster');
 
 
 <div class=" top-banner container">
-    <video class="video video-size-fit" preload loop poster="https://www.chincommunications.com.au/wp-content/uploads/2021/04/1-Marketing-Landing-Page-1410x792-1.jpg">
-        <source src="https://www.chincommunications.com.au/wp-content/uploads/2020/10/Kate-general.mp4" type="video/mp4" />
+    <video class="video video-size-fit" preload="none" loop poster="https://www.chincommunications.com.au/wp-content/uploads/2021/04/1-Marketing-Landing-Page-1410x792-1.jpg">
+        <source src="https://www.chincommunications.com.au/wp-content/uploads/2021/05/Chin-Marketing-Overview-Final.mp4" type="video/mp4" />
     </video>
     <button class="play-link">
         <i class="fa fa-play icon"></i>
