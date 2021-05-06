@@ -149,7 +149,7 @@ $services = get_children([
                                 <div style="position:relative;">
                                     <!-- title -->
                                     <div style="width: 100%;position:absolute;top:0;padding-top:5px;padding-left:15px; padding-bottom:5px;text-align:left;" class="top-title-inside">
-                                        <span class="case-title span2"><?= $post->post_title ?></span>
+                                        <span class="case-title"><?= $post->post_title ?></span>
                                     </div>
                                     <!-- photo -->
                                     <img src="<?= get_field('new_list_background_2', $post)['url'] ?>" alt="" style="width:100%;">
@@ -173,7 +173,7 @@ $services = get_children([
                                 <div style="position:relative;">
                                     <!-- title -->
                                     <div style="width: 100%;position:absolute;top:0;padding-top:5px;padding-left:15px; padding-bottom:5px;text-align:left;" class="top-title-inside">
-                                        <span class="case-title span2"><?= $post->post_title ?></span>
+                                        <span class="case-title"><?= $post->post_title ?></span>
                                     </div>
                                     <!-- photo -->
                                     <img src="<?= get_field('new_list_background_1', $post)['url'] ?>" alt="" style="width:100%;">
@@ -197,7 +197,7 @@ $services = get_children([
                             <div style="position:relative;">
                                 <!-- title -->
                                 <div style="width: 100%;position:absolute;top:0;padding-top:5px;padding-left:15px; padding-bottom:5px;text-align:left;" class="top-title-inside">
-                                    <span class="case-title span2"><?= $post->post_title ?></span>
+                                    <span class="case-title"><?= $post->post_title ?></span>
                                 </div>
                                 <!-- photo -->
                                 <img src="<?= get_field('new_list_background_3', $post)['url'] ?>" alt="" style="width:100%;">
@@ -219,7 +219,7 @@ $services = get_children([
                             <div style="position:relative;">
                                 <!-- title -->
                                 <div style="width: 100%;position:absolute;top:0;padding-top:5px;padding-left:15px; padding-bottom:5px;text-align:left;" class="top-title-inside">
-                                    <span class="case-title span2"><?= $post->post_title ?></span>
+                                    <span class="case-title"><?= $post->post_title ?></span>
                                 </div>
                                 <!-- photo -->
                                 <img src="<?= get_field('new_list_background_4', $post)['url'] ?>" alt="" style="width:100%;">
@@ -241,7 +241,7 @@ $services = get_children([
                             <div style="position:relative;">
                                 <!-- title -->
                                 <div style="width: 100%;position:absolute;top:0;padding-top:5px;padding-left:15px; padding-bottom:5px;text-align:left;" class="top-title-inside">
-                                    <span class="case-title span2"><?= $post->post_title ?></span>
+                                    <span class="case-title"><?= $post->post_title ?></span>
                                 </div>
                                 <!-- photo -->
                                 <img src="<?= get_field('new_list_background_5', $post)['url'] ?>" alt="" style="width:100%;">
