@@ -416,7 +416,9 @@ $services = get_children([
     } 
 
     .find_out_how{
-        border-color:black; width: 47%;color:#000000;
+        border-color:black; 
+        width: 47% !important;
+        color:#000000 !important;
     }
 </style>
 <script>
