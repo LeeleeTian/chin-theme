@@ -299,7 +299,8 @@ $services = get_children([
                 <div class="span2" style="position: absolute;width:90%;top:5%;text-align:center;">
                     <span>China Market Research | China Strategy</span><br>
                     <span>Wechat Management | Branding and Communication Design</span>
-                    <div class="find_more" style="border-color:black; width: 47%;color:#000000;">
+                    
+                    <div class="find_more find_out_how">
                     <a href="https://www.chincommunications.com.au/home/communication-and-marketing-services/chinese-marketing-and-advertising/" class="remove-link-line">
                    <span style="color:#000000;">find out how</span> 
                     </a>
@@ -413,6 +414,10 @@ $services = get_children([
     a.remove-link-line:active {
         text-decoration: none;
     } 
+
+    .find_out_how{
+        border-color:black; width: 47%;color:#000000;
+    }
 </style>
 <script>
 
